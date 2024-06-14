@@ -1,0 +1,83 @@
+.about-us-section {
+    width: 100%;
+    height: 98vh;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../IMAGES/about-us1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-about-us-div {
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.about-us-text-div {
+    width: 60%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    /* background: rgba(90, 90, 90, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px); */
+    background: rgba(90, 90, 90, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+}
+.about-us-text-div:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+.about-us-text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.WHO-ARE-WE{
+    font-size: 3vw;
+}
+
+.abt-us-p {
+    font-size: 1.4vw;
+    color: white;
+    font-weight: 500;
+    font-style: italic;
+}
+
+h2 {
+    color: white;
+    font-weight: 900;
+}
+
+h2::after {
+    height: 3px;
+    width: 0;
+    content: "";
+    display: block;
+    margin: left;
+    background-color: #eb2c33;
+
+}
+
+h2:hover::after {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+

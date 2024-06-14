@@ -1,0 +1,223 @@
+
+
+.how-to-order {
+    width: 92%;
+    height: fit-content;
+    /* border: 1px solid red; */
+    margin-top: 110px;
+}
+
+.how-to-order-header-main {
+    font-size: 2.5vw;
+}
+
+
+.how-to-order-DIV{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* border: 1px solid green; */
+    margin-top: 20px;
+}
+
+.how-to-order-headers {
+    font-size: 2vw;
+    line-height: 50px;
+}
+
+.how-to-order-paras{
+    font-size: 1vw;
+}
+
+.ORDER {
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 800;
+}
+
+
+/* HOW TO ORDER ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️ */
+
+
+
+.PAYMENT-METHOD {
+    width: 92%;
+    height: 90vh;
+    /* border: 1px solid red; */
+    margin-top: 110px;
+    font-size: 2vw;
+}
+
+/*PAYMENT-METHOD ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️ */
+
+
+
+.SHIPPING-DELIVERIES-section {
+    width: 92%;
+    height: fit-content;
+    /* border: 1px solid red; */
+    margin-top: 110px;
+}
+
+.ship-del-header-main {
+    font-size: 2.5vw;
+}
+
+
+.SHIPMENT-div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* border: 1px solid green; */
+    margin-top: 20px;
+}
+
+.ship-del-headers {
+    font-size: 2vw;
+    line-height: 50px;
+}
+
+.ship-del-paras {
+    font-size: 1vw;
+}
+
+.SHIPMENT,
+.DELEVERIES {
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 800;
+}
+
+/*SHIPPING-DELIVERIES ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️ */
+
+
+
+.EXCHANGE_RETURNS {
+    width: 92%;
+    height: fit-content;
+    /* border: 1px solid red; */
+    margin-top: 110px;
+}
+
+.EXCHANGE_RETURNS-header-main {
+    font-size: 2.5vw;
+
+}
+
+.EXCHANGE-DIV {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.EX-RE-headers {
+    font-size: 2vw;
+    line-height: 50px;
+}
+.EX-RE-paras {
+    font-size: 1vw;
+}
+
+.Refund,
+.DELEVERIES {
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 800;
+}
+/*EXCHANGE_RETURNS ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️ */
+
+
+
+
+.TERMS_CONDITIONS {
+    width: 92%;
+    height: fit-content;
+    /* border: 1px solid red; */
+    margin-top: 110px;
+}
+
+.TERMS_CONDITIONS-header-main {
+    font-size: 2.5vw;
+
+}
+
+.TERMS-CONDITIONS-DIV {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.TE-CO-headers{
+    font-size: 2vw;
+    line-height: 50px;
+}
+.TE-CO-paras {
+    font-size: 1vw;
+}
+
+.TERMS,
+.CONDITIONS {
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 800;
+}
+
+/*TERMS_CONDITIONS ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️ */
+
+
+
+.PRIVACY_POLICY {
+    width: 92%;
+    height: fit-content;
+    /* border: 1px solid red; */
+    margin-top: 110px;
+}
+
+.PRIVACY_POLICY-header-main {
+    font-size: 2.5vw;
+
+}
+
+.PRIVACY_POLICY-DIV {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.PR-PO-headers{
+    font-size: 2vw;
+    line-height: 50px;
+}
+.PR-PO-paras {
+    font-size: 1vw;
+}
+
+.POLICY {
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
