@@ -136,7 +136,15 @@
     font-size: 15px;
     font-weight: 400;
 }
-
+.strike-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+}
 
 
 
@@ -204,6 +212,10 @@
         -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
         transform: scale(1.1);
     }
+    .shirt-name {
+        font-size: 14px;
+       
+    }
 }
 @media only screen and (max-width:395px) {
     .radio-boxes{
@@ -213,6 +225,9 @@
 @media only screen and (max-width:369px) {
     .radio-boxes{
         width: 52%;
+    }
+    .shirt-name {
+        font-size: 18px;
     }
 }
 .shirt-cart-btn {

@@ -47,7 +47,7 @@
                     <a href="../index.php" style="text-decoration: none;">
                         <li class="normal-header-list">
                             <i class='bx bxs-bar-chart-alt-2'></i>
-                            <span class="logo-text">SAKHI</span>
+                            <span class="logo-text">TWO FACE</span>
                         </li>
                     </a>
                 </div>
@@ -77,7 +77,7 @@
             <div class="side-nav-bar-options">
                 <div class="sidebar-logo">
                     <div class="sidebar-logo-div"><i class="fa fa-times" id="close" aria-hidden="true"></i>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: 800;">SAKHI</span></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: 800;">TWO FACE</span></div>
                 </div>
             </div>
 

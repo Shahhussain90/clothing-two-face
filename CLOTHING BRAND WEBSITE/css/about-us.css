@@ -1,7 +1,7 @@
 .about-us-section {
     width: 100%;
     height: 98vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,6 @@
 .main-about-us-div {
     width: 100%;
     height: fit-content;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,23 +49,58 @@
     text-align: center;
 }
 
-.WHO-ARE-WE{
-    font-size: 3vw;
-}
+
 
 .abt-us-p {
-    font-size: 1.4vw;
+    font-size: 1rem;
     color: white;
     font-weight: 500;
     font-style: italic;
 }
 
-h2 {
+.WHO-ARE-WE {
     color: white;
     font-weight: 900;
+    font-size:3.5rem;
+}
+@media only screen and (max-width:730px){
+    .abt-us-p {
+        font-size: 0.95rem;
+    }
+    .WHO-ARE-WE {
+        font-size:3rem;
+    }
+}
+@media only screen and (max-width:673px){
+    .about-us-text-div {
+        width: 80%;
+    }
+    
+}
+@media only screen and (max-width:500px){
+    .abt-us-p {
+        font-size: 0.9rem;
+    }
+    .WHO-ARE-WE {
+        font-size:2.6rem};
+        .about-us-text-div {
+            width: 85%;
+        }
+    
+}
+@media only screen and (max-width:400px){
+    .abt-us-p {
+        font-size: 0.85rem;
+    }
+    .WHO-ARE-WE {
+        font-size:2.3rem};
+        .about-us-text-div {
+            width: 100%;
+        }
+    
 }
 
-h2::after {
+.WHO-ARE-WE::after {
     height: 3px;
     width: 0;
     content: "";
@@ -76,8 +110,19 @@ h2::after {
 
 }
 
-h2:hover::after {
+.WHO-ARE-WE:hover::after {
     width: 100%;
     transition: all 0.3s ease;
 }
+
+
+
+
+
+
+
+
+
+
+
 

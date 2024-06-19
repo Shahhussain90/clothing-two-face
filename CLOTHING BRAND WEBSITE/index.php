@@ -4,13 +4,12 @@ session_start();
 if (!isset($_SESSION['email'])) {
     header('location:FILES/LOGIN.php');
 }
-if(isset($_COOKIE['email']) && isset($_COOKIE['password']) ){
-    $id= $_COOKIE['email'];
-    $pass= $_COOKIE['password'];
-}
-else{
-    $id= "";
-    $pass= "";
+if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
+    $id = $_COOKIE['email'];
+    $pass = $_COOKIE['password'];
+} else {
+    $id = "";
+    $pass = "";
 }
 ?>
 
@@ -97,8 +96,11 @@ else{
 
                     <div class="INFO" id="INFO">
                         <h2 class="shirt-name">men graphic T-shirt</h2>
-                        <h3 class="shirt-price">RS.1500</h3>
-                        <strike>RS.2500</strike>
+                        <div class="strike-align">
+                            <h3 class="shirt-price">RS.1500</h3> &nbsp;
+                            <strike><h3 class="shirt-price">RS.2500</h3></strike>
+                        </div>
+                        <div>rating</div>
                     </div>
 
                 </div>
@@ -364,7 +366,7 @@ else{
 
 
     <div class="email-subscribe-div">
-        <div class="email-text">Subscribe to the sakhi Email
+        <div class="email-text">Subscribe to the Two FACE Email
             to be notified of limited discounts and
             important news.</div>
 

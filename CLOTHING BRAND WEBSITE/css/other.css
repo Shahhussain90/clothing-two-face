@@ -47,8 +47,19 @@
     height: 90vh;
     /* border: 1px solid red; */
     margin-top: 110px;
-    font-size: 2vw;
+    font-size: 2rem;
 }
+@media only screen and (max-width:930px) {
+    .PAYMENT-METHOD {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width:555px) {
+    .PAYMENT-METHOD {
+        font-size: 1rem;
+    }
+}
+
 
 /*PAYMENT-METHOD ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️ */
 
@@ -62,7 +73,7 @@
 }
 
 .ship-del-header-main {
-    font-size: 2.5vw;
+    font-size: 2.5rem;
 }
 
 
@@ -77,21 +88,58 @@
 }
 
 .ship-del-headers {
-    font-size: 2vw;
+    font-size: 2rem;
     line-height: 50px;
 }
 
 .ship-del-paras {
-    font-size: 1vw;
+    font-size: 1rem;
 }
 
 .SHIPMENT,
 .DELEVERIES {
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2.5rem;
     font-weight: 800;
 }
 
+@media only screen and (max-width:800px) {
+    
+    .ship-del-header-main {
+        font-size: 2rem;
+    }
+    .ship-del-headers {
+        font-size: 1.6rem;
+    }
+    
+    .ship-del-paras {
+        font-size: 0.9rem;
+    }
+    
+    .SHIPMENT,
+    .DELEVERIES {
+
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width:440px) {
+    
+    .ship-del-header-main {
+        font-size: 1.7rem;
+    }
+    .ship-del-headers {
+        font-size: 1.2rem;
+    }
+    
+    .ship-del-paras {
+        font-size: 0.81rem;
+    }
+    
+    .SHIPMENT,
+    .DELEVERIES {
+        font-size: 1.7rem;
+    }
+}
 /*SHIPPING-DELIVERIES ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️ */
 
 
@@ -104,8 +152,7 @@
 }
 
 .EXCHANGE_RETURNS-header-main {
-    font-size: 2.5vw;
-
+    font-size: 2.5rem;
 }
 
 .EXCHANGE-DIV {
@@ -117,18 +164,34 @@
 }
 
 .EX-RE-headers {
-    font-size: 2vw;
+    font-size: 2rem;
     line-height: 50px;
 }
 .EX-RE-paras {
-    font-size: 1vw;
+    font-size: 1.1rem;
 }
 
 .Refund,
 .DELEVERIES {
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2.5rem;
     font-weight: 800;
+}
+@media only screen and (max-width:768px) {
+    .EXCHANGE_RETURNS-header-main {
+        font-size: 2rem;
+    }
+    .EX-RE-headers {
+        font-size: 1.7rem;
+    }
+    .EX-RE-paras {
+        font-size: 1rem;
+    }
+    .Refund,
+    .DELEVERIES {
+        
+        font-size: 2rem;
+    }
 }
 /*EXCHANGE_RETURNS ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️ */
 
@@ -143,7 +206,7 @@
 }
 
 .TERMS_CONDITIONS-header-main {
-    font-size: 2.5vw;
+    font-size: 2.5rem;
 
 }
 
@@ -156,18 +219,52 @@
 }
 
 .TE-CO-headers{
-    font-size: 2vw;
+    font-size: 2rem;
     line-height: 50px;
 }
 .TE-CO-paras {
-    font-size: 1vw;
+    font-size: 1rem;
 }
 
 .TERMS,
 .CONDITIONS {
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2.5rem;
     font-weight: 800;
+}
+@media only screen and (max-width:768px) {
+    .TERMS_CONDITIONS-header-main {
+        font-size: 2rem;
+    
+    }
+    .TE-CO-headers{
+        font-size: 1.7rem;
+    }
+    .TE-CO-paras {
+        font-size: 1rem;
+    }
+    
+    .TERMS,
+    .CONDITIONS {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width:426px) {
+    .TERMS_CONDITIONS-header-main {
+        font-size: 1.7rem;
+    
+    }
+    .TE-CO-headers{
+        font-size: 1.3rem;
+    }
+    .TE-CO-paras {
+        font-size: 0.9rem;
+    }
+    
+    .TERMS,
+    .CONDITIONS {
+        font-size: 1.7rem;
+    }
 }
 
 /*TERMS_CONDITIONS ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️ */
@@ -182,7 +279,7 @@
 }
 
 .PRIVACY_POLICY-header-main {
-    font-size: 2.5vw;
+    font-size: 2.5rem;
 
 }
 
@@ -195,20 +292,35 @@
 }
 
 .PR-PO-headers{
-    font-size: 2vw;
+    font-size: 2rem;
     line-height: 50px;
 }
 .PR-PO-paras {
-    font-size: 1vw;
+    font-size: 1rem;
 }
 
 .POLICY {
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2.5rem;
     font-weight: 800;
 }
 
-
+@media only screen and (max-width:829px) {
+    .PRIVACY_POLICY-header-main {
+        font-size: 2rem;  
+    }  
+    .PR-PO-headers{
+        font-size: 1.6rem;
+        line-height: 50px;
+    }
+    .PR-PO-paras {
+        font-size: 0.9rem;
+    }
+    
+    .POLICY {
+        font-size: 2rem;
+    }
+}
 
 
 

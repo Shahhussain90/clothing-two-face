@@ -33,7 +33,7 @@
           CAN WE HELP YOU?
         </div>
         <div class="footer-divs">
-          <a href="" class="footer-info-text"> <i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp; sakhi@gmail.com</a>
+          <a href="" class="footer-info-text"> <i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp; TWO FACE@gmail.com</a>
 
         </div>
         <div class="footer-divs">
@@ -66,7 +66,7 @@
 
       <div class="footerDIV">
         <div class="footer-headers">
-          ABOUT SAKHI
+          ABOUT TWO FACE
         </div>
 
         <div class="footer-divs">
@@ -95,9 +95,9 @@
       <div class="copyright-texts">
         <p>Copyright © 2021 Sakhi. All rights reserved.</p>
         <p>/</p>
-        <p><a href="" class="copyright-anchor">TERMS & CONDITIONS</a></p>
+        <p><a href="TERMS_CONDITIONS.php" class="copyright-anchor">TERMS & CONDITIONS</a></p>
         <p>/</p>
-        <p><a href="" class="copyright-anchor">PRIVACY POLICY</a></p>
+        <p><a href="PRIVACY_POLICY.php" class="copyright-anchor">PRIVACY POLICY</a></p>
       </div>
     </div>
 

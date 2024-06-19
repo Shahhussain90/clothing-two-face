@@ -23,7 +23,7 @@
     <section class="about-us-section">
         <div class="main-about-us-div">
             <div class="about-us-text-div">
-                <h2 class="WHO-ARE-WE">WHO ARE WE?</h2>
+                <h1 class="WHO-ARE-WE">WHO ARE WE?</h1>
                 <p class="abt-us-p">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Voluptatibus magnam
                     illum atque cupiditate. Repellat atque
