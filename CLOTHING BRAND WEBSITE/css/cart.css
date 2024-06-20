@@ -1,0 +1,31 @@
+.cart-items-section {
+    margin-top: 110px;
+    margin-bottom: 315px;
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+}
+
+
+.table {
+    width: 75%;
+    height: fit-content;
+}
+
+td {
+    border: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+th {
+    color: black;
+}
+
+.checkout-div {
+    width: 20%;
+    height: 380px;
+    border: 1px solid red;
+}

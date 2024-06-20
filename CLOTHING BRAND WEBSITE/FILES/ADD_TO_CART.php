@@ -1,5 +1,9 @@
 <?php
+include "config.php";
 session_start();
+if (!isset($_SESSION['email'])) {
+    header('location:LOGIN.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,33 +12,43 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/cart.css">
+    <style>
+        <?php include "../css/cart.css" ?>
+    </style>
     <title>Cart</title>
 </head>
 
 <body>
+    <?php
+    include "header.php";
+    ?>
 
-    <table>
+    <section class="cart-items-section">
 
-        <thead>
-            <tr>
-                <th>Serial No.</th>
-                <th>Product Name</th>
-                <th>Price</th>
-                <th>Size</th>
-                <th>Quantity</th>
-                <th>TOTAL</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+        <table class="table">
 
-        <tbody>
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">Serial No.</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">TOTAL</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
 
-            <?php
-            if (isset($_SESSION['cart'])) {
-                foreach ($_SESSION['cart'] as $key => $value) {
-                    $sr = $key + 1;
+            <tbody class="text-center">
 
-                    echo "
+                <?php
+                if (isset($_SESSION['cart'])) {
+                    foreach ($_SESSION['cart'] as $key => $value) {
+                        $sr = $key + 1;
+
+                        echo "
                                 <tr>    
                                     <td>$sr</td>
                                     <td>$value[product_name]</td>
@@ -42,57 +56,70 @@ session_start();
                                     <td>$value[product_price]<input type='hidden' class='iprice' value='$value[product_price]'></td>
                                      
                                     <td>$value[product_sizes]</td>
-                                    <form>
-                                    <td><input type='number' min='0' max='15' class='iquantity' onchange='subtotal()' value='$value[product_quantity]'></td>
+                                    <form method='post' action='manage_cart.php'>
+                                        <td><input type='number' min='0' max='15' class='iquantity text-center' onchange='this.form.submit()' name='mod_quantity' value='$value[product_quantity]'></td>
+                                        <input type='hidden' name='product_name' value='$value[product_name]'>
+                                         <input type='hidden' name='product_sizes' value='$value[product_sizes]'>
                                    </form>
                                     <td class='itotal'>$sr</td>
                                     <td>
                                         <form action='manage_cart.php' method='post'>
                                             <button name='remove_button'>Remove</button>
                                             <input type='hidden' name='product_name' value='$value[product_name]'>
-                                            <input type='hidden' name='product_price' value='$value[product_price]'>
-                                            <input type='hidden' name='product_sizes' value='$value[product_sizes]'>
-                                            <input type='hidden' name='product_quantity' value='$value[product_quantity]'>
+                                           
                                         </form>
                                     </td>
                                 </tr>
                             ";
+                    }
                 }
-            }
-            ?>
+                ?>
 
-        </tbody>
-
+            </tbody>
 
 
-    </table>
 
-    <div>
-        <h4 id="ytotal"></h4>
-    </div>
+        </table>
+
+        <div class="checkout-div">
+            <h4 id="ytotal"></h4>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <?php
+    include "footer.php";
+    ?>
 
     <script>
-
         var gt = 0;
         var iprice = document.getElementsByClassName('iprice');
         var iquantity = document.getElementsByClassName('iquantity');
         var itotal = document.getElementsByClassName('itotal');
         var ytotal = document.getElementById('ytotal');
 
-        function subtotal(){
+        function subtotal() {
             gt = 0;
-            for(var i = 0; i < iprice.length; i++){
+            for (var i = 0; i < iprice.length; i++) {
 
-                itotal[i].innerText = (iprice[i].value)*(iquantity[i].value);
+                itotal[i].innerText = (iprice[i].value) * (iquantity[i].value);
                 gt = gt + (iprice[i].value * iquantity[i].value);
-                ytotal.innerText=gt;
+                ytotal.innerText = gt;
             }
         }
         subtotal();
-
     </script>
-
-
 </body>
 
 </html>

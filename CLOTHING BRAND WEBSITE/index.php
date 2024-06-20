@@ -45,6 +45,70 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
     <section class="shopping-cards-home grid-main">
 
+        <div class="shopping-cards-div-home">
+
+
+            <div class="home-cards" id="home-cards">
+
+
+
+                <div class="card-image-div">
+                    <div class="new-tag">
+                        <div class="new-txt">NEW</div>
+                    </div>
+
+                    <img src="IMAGES/shirt-1.jpg" class="shirt-div" alt="">
+                </div>
+
+
+                <div class="shirt-details">
+
+
+                    <div class="shirt-hover-div" id="shirt-hover-div">
+
+                        <div class="btn-dic-atc">
+                            <form action="FILES/manage_cart.php" method="post" class="add-to-cart-form">
+
+                                <input type="hidden" name="product_id" value="3">
+                                <input type="hidden" name="product_name" value=" T-shirt">
+                                <input type="hidden" name="product_price" value="150">
+
+
+                                <div class="radio-boxes">
+                                    <label for="product_sizes" class="radio-labels">S</label>
+                                    <input type="radio" class="radios" value="small" name="product_sizes" required>
+
+                                    <label for="product_sizes" class="radio-labels">M</label>
+                                    <input type="radio" class="radios" value="medium" name="product_sizes" required>
+
+                                    <label for="product_sizes" class="radio-labels">L</label>
+                                    <input type="radio" class="radios" value="large" name="product_sizes" required>
+                                </div>
+
+                                <button type="submit" name="add_to_cart" class="shirt-cart-btn">Add To Cart</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="INFO" id="INFO">
+                        <h2 class="shirt-name">men graphic T-shirt</h2>
+                        <div class="strike-align">
+                            <h3 class="shirt-price">RS.150w0</h3> &nbsp;
+                            <strike>
+                                <h3 class="shirt-price">RS.2500</h3>
+                            </strike>
+                        </div>
+                        <div>rating</div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
 
 
 
@@ -78,7 +142,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                                 <input type="hidden" name="product_id" value="1">
                                 <input type="hidden" name="product_name" value="men graphic T-shirt">
                                 <input type="hidden" name="product_price" value="1500">
-                            
+
 
                                 <div class="radio-boxes">
                                     <label for="product_sizes" class="radio-labels">S</label>
@@ -101,7 +165,9 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                         <h2 class="shirt-name">men graphic T-shirt</h2>
                         <div class="strike-align">
                             <h3 class="shirt-price">RS.1500</h3> &nbsp;
-                            <strike><h3 class="shirt-price">RS.2500</h3></strike>
+                            <strike>
+                                <h3 class="shirt-price">RS.2500</h3>
+                            </strike>
                         </div>
                         <div>rating</div>
                     </div>
@@ -113,6 +179,133 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
         </div>
 
+        <div class="shopping-cards-div-home">
+
+
+            <div class="home-cards" id="home-cards">
+
+
+
+                <div class="card-image-div">
+                    <div class="new-tag">
+                        <div class="new-txt">NEW</div>
+                    </div>
+
+                    <img src="IMAGES/shirt-1.jpg" class="shirt-div" alt="">
+                </div>
+
+
+                <div class="shirt-details">
+
+
+                    <div class="shirt-hover-div" id="shirt-hover-div">
+
+                        <div class="btn-dic-atc">
+                            <form action="FILES/manage_cart.php" method="post" class="add-to-cart-form">
+
+                                <input type="hidden" name="product_id" value="2">
+                                <input type="hidden" name="product_name" value=" graphic T-shirt">
+                                <input type="hidden" name="product_price" value="2000">
+
+
+                                <div class="radio-boxes">
+                                    <label for="product_sizes" class="radio-labels">S</label>
+                                    <input type="radio" class="radios" value="small" name="product_sizes" required>
+
+                                    <label for="product_sizes" class="radio-labels">M</label>
+                                    <input type="radio" class="radios" value="medium" name="product_sizes" required>
+
+                                    <label for="product_sizes" class="radio-labels">L</label>
+                                    <input type="radio" class="radios" value="large" name="product_sizes" required>
+                                </div>
+
+                                <button type="submit" name="add_to_cart" class="shirt-cart-btn">Add To Cart</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="INFO" id="INFO">
+                        <h2 class="shirt-name">men graphic T-shirt</h2>
+                        <div class="strike-align">
+                            <h3 class="shirt-price">RS.1500</h3> &nbsp;
+                            <strike>
+                                <h3 class="shirt-price">RS.2500</h3>
+                            </strike>
+                        </div>
+                        <div>rating</div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="shopping-cards-div-home">
+
+
+            <div class="home-cards" id="home-cards">
+
+
+
+                <div class="card-image-div">
+                    <div class="new-tag">
+                        <div class="new-txt">NEW</div>
+                    </div>
+
+                    <img src="IMAGES/shirt-1.jpg" class="shirt-div" alt="">
+                </div>
+
+
+                <div class="shirt-details">
+
+
+                    <div class="shirt-hover-div" id="shirt-hover-div">
+
+                        <div class="btn-dic-atc">
+                            <form action="FILES/manage_cart.php" method="post" class="add-to-cart-form">
+
+                                <input type="hidden" name="product_id" value="1">
+                                <input type="hidden" name="product_name" value="men graphic T-shirt">
+                                <input type="hidden" name="product_price" value="1500">
+
+
+                                <div class="radio-boxes">
+                                    <label for="product_sizes" class="radio-labels">S</label>
+                                    <input type="radio" class="radios" value="small" name="product_sizes" required>
+
+                                    <label for="product_sizes" class="radio-labels">M</label>
+                                    <input type="radio" class="radios" value="medium" name="product_sizes" required>
+
+                                    <label for="product_sizes" class="radio-labels">L</label>
+                                    <input type="radio" class="radios" value="large" name="product_sizes" required>
+                                </div>
+
+                                <button type="submit" name="add_to_cart" class="shirt-cart-btn">Add To Cart</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="INFO" id="INFO">
+                        <h2 class="shirt-name">men graphic T-shirt</h2>
+                        <div class="strike-align">
+                            <h3 class="shirt-price">RS.1500</h3> &nbsp;
+                            <strike>
+                                <h3 class="shirt-price">RS.2500</h3>
+                            </strike>
+                        </div>
+                        <div>rating</div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
 
 
 
