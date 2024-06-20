@@ -73,26 +73,29 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                     <div class="shirt-hover-div" id="shirt-hover-div">
 
                         <div class="btn-dic-atc">
-                            <form action="check.php" method="post" class="add-to-cart-form">
+                            <form action="FILES/manage_cart.php" method="post" class="add-to-cart-form">
 
                                 <input type="hidden" name="product_id" value="1">
                                 <input type="hidden" name="product_name" value="men graphic T-shirt">
                                 <input type="hidden" name="product_price" value="1500">
+                            
+
                                 <div class="radio-boxes">
-                                    <label for="" class="radio-labels">S</label>
-                                    <input type="radio" class="radios" value="small" name="sizes">
+                                    <label for="product_sizes" class="radio-labels">S</label>
+                                    <input type="radio" class="radios" value="small" name="product_sizes" required>
 
-                                    <label for="" class="radio-labels">M</label>
-                                    <input type="radio" class="radios" value="medium" name="sizes">
+                                    <label for="product_sizes" class="radio-labels">M</label>
+                                    <input type="radio" class="radios" value="medium" name="product_sizes" required>
 
-                                    <label for="" class="radio-labels">L</label>
-                                    <input type="radio" class="radios" value="large" name="sizes">
+                                    <label for="product_sizes" class="radio-labels">L</label>
+                                    <input type="radio" class="radios" value="large" name="product_sizes" required>
                                 </div>
-                                <button type="submit" name="add-to-cart" class="shirt-cart-btn">Add To Cart</button>
+
+                                <button type="submit" name="add_to_cart" class="shirt-cart-btn">Add To Cart</button>
+
                             </form>
                         </div>
                     </div>
-
 
                     <div class="INFO" id="INFO">
                         <h2 class="shirt-name">men graphic T-shirt</h2>
@@ -102,6 +105,8 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                         </div>
                         <div>rating</div>
                     </div>
+
+
 
                 </div>
             </div>

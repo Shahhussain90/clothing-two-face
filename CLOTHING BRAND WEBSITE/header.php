@@ -58,7 +58,7 @@
                         <a href="" class="search-anchor">search <i class='bx bx-search'></i></a>
                     </li>
                     <li class="normal-header-list cart-ANCHOR-list ">
-                        <a href="" class="cart-ANCHOR"><i class='bx bx-cart'></i></a>
+                        <a href="FILES/ADD_TO_CART.php" class="cart-ANCHOR"><i class='bx bx-cart'></i></a>
                     </li>
 
                     <li class="normal-header-list list3"><i class="fa fa-bars" id="bar" aria-hidden="true"></i></li>
