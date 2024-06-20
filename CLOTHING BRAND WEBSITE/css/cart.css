@@ -5,7 +5,7 @@
     height: fit-content;
     /* border: 1px solid blue; */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 
@@ -24,8 +24,131 @@ th {
     color: black;
 }
 
-.checkout-div {
-    width: 20%;
-    height: 380px;
-    border: 1px solid red;
+.remove_button{
+    border: 0;
+    color:#eb2c33;
+    background-color: transparent;
 }
+.remove_button:hover{
+   color: black;
+   transition: all ease-in 0.3s;
+}
+
+.iquantity{
+    border: 0;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+
+
+
+
+
+
+.checkout-div {
+    width: 22%;
+    height: 410px;
+    /* border: 1px solid red; */
+    box-shadow: 0px 0px 10px 2px black;
+    border-radius: 10px;
+}
+.checkout-heading-div{
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 5px;
+}
+.checkout-heading{
+    font-size: 2rem;
+}
+
+.checkout-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid red; */
+}
+.checkout-inputs{
+    width: 90%;
+    height: 30px;
+    margin-top: 5px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #eb2c33;
+}
+.checkout-inputs[type=number]::-webkit-inner-spin-button, 
+.checkout-inputs[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 0;
+
+}
+
+
+.radio-boxes-checkout{
+    width: 90%;
+    height: fit-content;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.radios-checkout{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
+    transform: scale(1.2);
+    accent-color: #eb2c33;
+}
+.radio-labels-checkout{
+    font-size: 0.9rem;
+}
+
+
+
+
+.total-div{
+    width: 90%;
+    height: fit-content;
+    /* border: 1px solid red; */
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+#delivery-checkout{
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+
+.checkout_btn_div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkout_btn {
+    padding: 0px 35px 0px 35px;
+    background-color: #eb2c33;
+    border: 1.5px solid #eb2c33;
+    color: white;
+    outline: 0;
+}
+
+.checkout_btn:hover {
+    background-color: white;
+    color: #eb2c33;
+    border: 1.5px solid #eb2c33;
+    transition: all 0.4s ease-in;
+}
+
+

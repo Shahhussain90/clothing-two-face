@@ -64,8 +64,9 @@ if (!isset($_SESSION['email'])) {
                                     <td class='itotal'>$sr</td>
                                     <td>
                                         <form action='manage_cart.php' method='post'>
-                                            <button name='remove_button'>Remove</button>
+                                            <button name='remove_button' class='remove_button'>Remove</button>
                                             <input type='hidden' name='product_name' value='$value[product_name]'>
+                                             <input type='hidden' name='product_sizes' value='$value[product_sizes]'>
                                            
                                         </form>
                                     </td>
@@ -82,7 +83,47 @@ if (!isset($_SESSION['email'])) {
         </table>
 
         <div class="checkout-div">
-            <h4 id="ytotal"></h4>
+            <div class="checkout-heading-div">
+                <h1 class="checkout-heading">CHECKOUT</h1>
+            </div>
+            <form action="" method="POST" class="checkout-form">
+
+                <input type="text" class="checkout-inputs" placeholder="Full name" required>
+                <input type="email" class="checkout-inputs" placeholder="Email" required>
+                <input type="number" class="checkout-inputs" placeholder="Phone number" required>
+                <input type="text" class="checkout-inputs" placeholder="Address" required>
+                <div class="radio-boxes-checkout">
+                    <div>
+                        <label for="delivery_type" class="radio-labels-checkout">normal delivery (RS300)</label>
+                        <input type="radio" class="radios-checkout" id="radio_normal" value="normal delivery" name="delivery_type" required>
+                    </div>
+                    <div>
+                        <label for="delivery_type" class="radio-labels-checkout">express delivery (RS600)</label>
+                        <input type="radio" class="radios-checkout" id="radio_express" value="express delivery" name="delivery_type" required>
+                    </div>
+                    <div>
+                        <label for="delivery" class="radio-labels-checkout">cash on delivery</label>
+                        <input type="radio" checked="checked" class="radios-checkout" value="cash on delivery" name="delivery" required>
+                    </div>
+                </div>
+
+
+                <div class="total-div">
+                    <div id="ytotal"></div>
+                    <div id="delivery-checkout">Delivery charges: not included in subtotal</div>
+                </div>
+
+
+                <div class="checkout_btn_div">
+                    <button type="submit" class="checkout_btn">submit</button>
+                </div>
+
+
+            </form>
+
+
+
+
         </div>
 
 
@@ -115,7 +156,7 @@ if (!isset($_SESSION['email'])) {
 
                 itotal[i].innerText = (iprice[i].value) * (iquantity[i].value);
                 gt = gt + (iprice[i].value * iquantity[i].value);
-                ytotal.innerText = gt;
+                ytotal.innerText = "subtotal : " + gt;
             }
         }
         subtotal();

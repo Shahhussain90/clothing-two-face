@@ -5,8 +5,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["add_to_cart"])) {
         if (isset($_SESSION['cart'])) {
             $product_names = array_column($_SESSION['cart'], 'product_name');
+            $product_id = array_column($_SESSION['cart'], 'product_id');
 
-            if (in_array($_POST['product_name'], $product_names)) {
+            if (in_array($_POST['product_name'], $product_names) && in_array($_POST['product_id'], $product_id)) {
                 echo "<script>
                     alert('item already added')
                     window.location.href='../index.php'
@@ -34,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($_POST['remove_button'])) {
         foreach ($_SESSION['cart'] as $key => $value) {
-            if ($value['product_name'] == $_POST['product_name']) {
+            if ($value['product_name'] == $_POST['product_name'] && $value['product_sizes'] == $_POST['product_sizes']) {
                 unset($_SESSION['cart'][$key]);
                 $_SESSION['cart'] = array_values($_SESSION['cart']);
                 echo "<script>
