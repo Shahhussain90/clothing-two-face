@@ -93,36 +93,43 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
             <div class="checkout-heading-div">
                 <h1 class="checkout-heading">CHECKOUT</h1>
             </div>
-            <form action="" method="POST" class="checkout-form">
+            <form action="purchase.php" method="POST" class="checkout-form">
 
-                <input type="text" class="checkout-inputs" name="" placeholder="Full name" required>
-                <input type="email" class="checkout-inputs" name="" placeholder="Email" required>
-                <input type="number" class="checkout-inputs" name="" placeholder="Phone number" required>
-                <input type="text" class="checkout-inputs" name="" placeholder="Address" required>
+                <input type="text" class="checkout-inputs" name="Customer_Full_name" placeholder="Full name" required>
+                <input type="email" class="checkout-inputs" name="Customer_Email" placeholder="Email" required>
+                <input type="number" class="checkout-inputs" name="Customer_Phone_number" placeholder="Phone number" required>
+                <input type="text" class="checkout-inputs" name="Customer_Address" placeholder="Address" required>
                 <div class="radio-boxes-checkout">
                     <div>
                         <label for="delivery_type" class="radio-labels-checkout">normal delivery (RS300)</label>
-                        <input type="radio" class="radios-checkout" id="radio_normal" value="normal delivery" name="delivery_type" required>
+                        <input type="radio" class="radios-checkout" id="radio_normal" onchange="final()" value="normal delivery" name="delivery_type" required>
                     </div>
                     <div>
                         <label for="delivery_type" class="radio-labels-checkout">express delivery (RS600)</label>
-                        <input type="radio" class="radios-checkout" id="radio_express" value="express delivery" name="delivery_type" required>
+                        <input type="radio" class="radios-checkout" id="radio_express" onchange="final()" value="express delivery" name="delivery_type" required>
+
                     </div>
                     <div>
                         <label for="delivery" class="radio-labels-checkout">cash on delivery</label>
-                        <input type="radio" checked="checked" class="radios-checkout" value="cash on delivery" name="delivery" required>
+                        <input type="radio" checked="checked" class="radios-checkout" value="cash on delivery" name="cash_on_delivery" required>
                     </div>
                 </div>
 
 
                 <div class="total-div">
-                    <input type="text" id="ytotal" name="total_cost" disabled>
-                    <div id="delivery-checkout">Delivery charges: not included in subtotal</div>
+                    <input type="text" id="ytotal" class="total_without_delivery_cost" name="total_without_delivery_cost" readonly>
+
+                    <div class="delivery-charges-div">
+
+                        <label for="total_delivery_cost">delivery charges included :</label>
+                        <input type="text" id="delivery-checkout" name="total_delivery_cost" class="total_delivery_cost" readonly>
+
+                    </div>
                 </div>
 
 
                 <div class="checkout_btn_div">
-                    <button type="submit" class="checkout_btn">submit</button>
+                    <button type="submit" class="checkout_btn" name="checkout_btn">submit</button>
                 </div>
 
 
@@ -163,15 +170,27 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
                 itotal[i].innerText = (iprice[i].value) * (iquantity[i].value);
                 gt = gt + (iprice[i].value * iquantity[i].value);
-                ytotal.value = "subtotal : " + gt;
+                ytotal.value = "subtotal : " + "RS"+ gt;
             }
         }
         subtotal();
-        af = Number(gt)
-       
-        
+
+        function final() {
+
+            // var normal_delivery_cost = document.getElementById('normal_delivery_cost');
+            // var express_delivery_cost = document.getElementById('express_delivery_cost');
+
+            var final_cost = document.getElementById('delivery-checkout');
+            af = Number(gt)
 
 
+            if (document.getElementById('radio_normal').checked) {
+                final_cost.value = af + 300;
+            } else {
+                final_cost.value = af + 600;
+            }
+        }
+        final()
     </script>
 </body>
 
