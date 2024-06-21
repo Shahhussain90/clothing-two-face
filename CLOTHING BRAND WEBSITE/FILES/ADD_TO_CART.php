@@ -4,6 +4,13 @@ session_start();
 if (!isset($_SESSION['email'])) {
     header('location:LOGIN.php');
 }
+if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
+    $id = $_COOKIE['email'];
+    $pass = $_COOKIE['password'];
+} else {
+    $id = "";
+    $pass = "";
+}
 ?>
 
 <!DOCTYPE html>
@@ -88,10 +95,10 @@ if (!isset($_SESSION['email'])) {
             </div>
             <form action="" method="POST" class="checkout-form">
 
-                <input type="text" class="checkout-inputs" placeholder="Full name" required>
-                <input type="email" class="checkout-inputs" placeholder="Email" required>
-                <input type="number" class="checkout-inputs" placeholder="Phone number" required>
-                <input type="text" class="checkout-inputs" placeholder="Address" required>
+                <input type="text" class="checkout-inputs" name="" placeholder="Full name" required>
+                <input type="email" class="checkout-inputs" name="" placeholder="Email" required>
+                <input type="number" class="checkout-inputs" name="" placeholder="Phone number" required>
+                <input type="text" class="checkout-inputs" name="" placeholder="Address" required>
                 <div class="radio-boxes-checkout">
                     <div>
                         <label for="delivery_type" class="radio-labels-checkout">normal delivery (RS300)</label>
@@ -109,7 +116,7 @@ if (!isset($_SESSION['email'])) {
 
 
                 <div class="total-div">
-                    <div id="ytotal"></div>
+                    <input type="text" id="ytotal" name="total_cost" disabled>
                     <div id="delivery-checkout">Delivery charges: not included in subtotal</div>
                 </div>
 
@@ -156,10 +163,15 @@ if (!isset($_SESSION['email'])) {
 
                 itotal[i].innerText = (iprice[i].value) * (iquantity[i].value);
                 gt = gt + (iprice[i].value * iquantity[i].value);
-                ytotal.innerText = "subtotal : " + gt;
+                ytotal.value = "subtotal : " + gt;
             }
         }
         subtotal();
+        af = Number(gt)
+       
+        
+
+
     </script>
 </body>
 
