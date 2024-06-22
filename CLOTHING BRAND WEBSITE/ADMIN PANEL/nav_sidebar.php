@@ -8,7 +8,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         <?php
-        // include "../css/admin_index.css";
         include "../css/admin_nav.css";
         ?>
     </style>
@@ -28,7 +27,7 @@
                 <a href="" class="admin_nav_links"><i class='bx bxs-dashboard admin_icons'></i> Dashboard</a>
             </div>
             <div class="admin_nav_links_divs">
-                <a href="" class="admin_nav_links"><i class='bx bxs-id-card'></i> Registered</a>
+                <a href="" class="admin_nav_links"><i class='bx bxs-id-card admin_icons'></i> Registered</a>
             </div>
             <div class="admin_nav_links_divs">
                 <a href="" class="admin_nav_links"><i class='bx bxs-user-detail admin_icons'></i> Customer details</a>

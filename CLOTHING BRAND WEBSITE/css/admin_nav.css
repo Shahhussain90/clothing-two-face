@@ -52,3 +52,43 @@
 .admin_icons{
     font-size: 1.1rem;
 }
+@media only screen and (max-width:755px) {
+    .navigation_sidebar{
+        width: 24%;
+    }
+    .admin_nav_links{
+        font-size: 0.85rem;
+    }
+    
+    
+    .admin_icons{
+        font-size: 0.85rem;
+    }
+
+}
+@media only screen and (max-width:634px) {
+    .navigation_sidebar{
+        width: 24%;
+    }
+    .admin_nav_links{
+        font-size: 0.8rem;
+    }
+    
+    
+    .admin_icons{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:539px) {
+    
+    .admin_icons{
+      display: none;
+    }
+}
+@media only screen and (max-width:364px) {
+    
+    .admin_nav_links{
+        font-size: 0.7rem;
+    }
+}

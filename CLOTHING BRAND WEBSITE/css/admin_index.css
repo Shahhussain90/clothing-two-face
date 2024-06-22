@@ -19,46 +19,47 @@ body {
 
 
 
-.dashboard_admin_panel{
+.dashboard_admin_panel {
     border: 1px solid red;
     width: 81.5%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-.page-heading-div{
+.page-heading-div {
     height: fit-content;
     width: 90%;
     /* border: 1px solid red; */
 }
 
-.logout-btn-form{
+.logout-btn-form {
     height: fit-content;
     width: 10%;
     /* border: 1px solid red; */
-   text-align: center;
+    text-align: center;
 }
 
-.logout_div{
+.logout_div {
     width: 95%;
     height: fit-content;
     display: flex;
     /* border: 1px solid red; */
 }
 
-.logout_button{
+.logout_button {
     background-color: black;
     color: white;
-    padding: 5px 20px 5px 20px ;
+    padding: 5px 20px 5px 20px;
     margin-top: 6px;
     outline: 0;
     border: 0;
- 
+
 }
-.logout_button:focus{
+
+.logout_button:focus {
     box-shadow: 0px 0px 10px 1px gray;
 }
 
@@ -70,19 +71,44 @@ body {
 
 /* grid starts */
 
-.grid_admin_index{
-    margin-top: 25px;
-    border: 1px solid red;
+.grid_admin_index {
+    margin-top: 55px;
+    /* border: 1px solid red; */
     width: 100%;
     display: grid;
-    grid-template-columns: 250px 250px 250px;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 400px 400px ;
+    grid-template-rows: 120px 120px ;
     gap: 20px;
     justify-content: center;
+
 }
 
-.grid_admin_index_boxes{
-    border: 1px solid green;
+.grid_admin_index_boxes {
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #743ad5, #d53a9d) 1;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-box-inner-div{
+    width: 90%;
+    height: 90%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+
+.bx-user-pin,.t-shirt,.bx-money-withdraw{
+    font-size: 6rem;
+    color: green;
+}
+
+.box-text{
+    font-size: 1rem;
 }
 
 
@@ -90,4 +116,43 @@ body {
 
 
 
+@media only screen and (max-width:1012px) {
+    .grid_admin_index {
+        grid-template-columns: 300px 300px ;
+        grid-template-rows: 120px 120px ;
+    }
+
+}
+
+@media only screen and (max-width:771px) {
+    .grid_admin_index {
+        grid-template-columns: 300px ;
+        grid-template-rows: 150px 150px 150px 150px ;
+    }
+
+}
+@media only screen and (max-width:755px) {
+    .dashboard_admin_panel {
+      
+        width: 76%;
+    }
+    .page-heading-div {
+        width: 80%;
+       
+    }
+   
+}
+@media only screen and (max-width:548px) {
+    .grid_admin_index {
+        grid-template-columns: 270px ;
+
+    } 
+}
+@media only screen and (max-width:364px) {
+    
+    .grid_admin_index {
+        grid-template-columns: 250px ;
+
+    } 
+}
 
