@@ -82,6 +82,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                     }
                 }
                 ?>
+                <!-- cart ⬆️⬆️⬆️⬆️ -->
 
             </tbody>
 
@@ -135,7 +136,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
             </form>
 
-
+                <!-- checkout form ⬆️⬆️⬆️ -->
 
 
         </div>

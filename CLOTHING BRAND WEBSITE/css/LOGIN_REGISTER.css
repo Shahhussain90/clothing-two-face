@@ -227,6 +227,11 @@ body {
 
 }
 
+/* forgot password ⬆️⬆️ */
+
+
+
+
 
 .NO-ACCOUNT-TEXT-DIV,
 .ALREADY-HAVE-AN-ACCOUNT-DIV {
@@ -242,6 +247,9 @@ body {
 .ALREADY-HAVE-AN-ACCOUNT-TEXT {
     font-size: 1vw;
 }
+
+/* no accounts ⬆️⬆️ */
+
 @media only screen and (max-width:970px) {
     .NO-ACCOUNT-TEXT,
     .ALREADY-HAVE-AN-ACCOUNT-TEXT {
