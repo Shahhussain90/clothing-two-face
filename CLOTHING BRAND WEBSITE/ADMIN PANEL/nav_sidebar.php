@@ -24,20 +24,20 @@
         <div class="navigation_links_admin_sidebar">
 
             <div class="admin_nav_links_divs">
-                <a href="" class="admin_nav_links"><i class='bx bxs-dashboard admin_icons'></i> Dashboard</a>
+                <a href="ADMIN_index.php" class="admin_nav_links"><i class='bx bxs-dashboard admin_icons'></i> Dashboard</a>
             </div>
             <div class="admin_nav_links_divs">
-                <a href="" class="admin_nav_links"><i class='bx bxs-id-card admin_icons'></i> Registered</a>
+                <a href="registered_people.php" class="admin_nav_links"><i class='bx bxs-id-card admin_icons'></i> Registered</a>
             </div>
             <div class="admin_nav_links_divs">
-                <a href="" class="admin_nav_links"><i class='bx bxs-user-detail admin_icons'></i> Customer details</a>
+                <a href="customer_details.php" class="admin_nav_links"><i class='bx bxs-user-detail admin_icons'></i> Customer details</a>
             </div>
 
             <div class="admin_nav_links_divs">
-                <a href="" class="admin_nav_links"><i class='bx bx-detail admin_icons'></i> Customer order details</a>
+                <a href="Customer_Order_Details.php" class="admin_nav_links"><i class='bx bx-detail admin_icons'></i> Customer order details</a>
             </div >
             <div class="admin_nav_links_divs">
-                <a href="" class="admin_nav_links"><i class='bx bxs-t-shirt admin_icons'></i></i> Add products</a>
+                <a href="ADD_PRODUCT.php" class="admin_nav_links"><i class='bx bxs-t-shirt admin_icons'></i></i> Add products</a>
             </div >
 
         </div>

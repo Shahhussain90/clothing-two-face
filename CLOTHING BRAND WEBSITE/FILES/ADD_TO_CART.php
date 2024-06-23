@@ -112,7 +112,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                     </div>
                     <div>
                         <label for="delivery" class="radio-labels-checkout">cash on delivery</label>
-                        <input type="radio" checked="checked" class="radios-checkout" value="cash on delivery" name="cash_on_delivery" required>
+                        <input type="radio" checked="checked" class="radios-checkout" value="COD" name="cash_on_delivery" required>
                     </div>
                 </div>
 
