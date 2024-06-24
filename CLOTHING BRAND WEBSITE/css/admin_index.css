@@ -20,9 +20,10 @@ body {
 
 
 .dashboard_admin_panel {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 81.5%;
-    /* height: 100vh; */
+    /* height: 100vh;
+    overflow-y: scroll; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,10 +77,11 @@ body {
     /* border: 1px solid red; */
     width: 100%;
     display: grid;
-    grid-template-columns: 400px 400px ;
-    grid-template-rows: 120px 120px ;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 120px 120px;
     gap: 20px;
     justify-content: center;
+
 
 }
 
@@ -94,7 +96,7 @@ body {
     align-items: center;
 }
 
-.grid-box-inner-div{
+.grid-box-inner-div {
     width: 90%;
     height: 90%;
     /* border: 1px solid red; */
@@ -102,12 +104,14 @@ body {
     align-items: center;
 }
 
-.bx-user-pin,.t-shirt,.bx-money-withdraw{
+.bx-user-pin,
+.t-shirt,
+.bx-money-withdraw {
     font-size: 6rem;
     color: green;
 }
 
-.box-text{
+.box-text {
     font-size: 1rem;
 }
 
@@ -118,43 +122,48 @@ body {
 
 @media only screen and (max-width:1012px) {
     .grid_admin_index {
-        grid-template-columns: 300px 300px ;
-        grid-template-rows: 120px 120px ;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 120px 120px;
     }
 
 }
 
 @media only screen and (max-width:771px) {
     .grid_admin_index {
-        grid-template-columns: 300px ;
-        grid-template-rows: 150px 150px 150px 150px ;
+        grid-template-columns: 300px;
+        grid-template-rows: 150px 150px 150px 150px;
     }
 
 }
+
 @media only screen and (max-width:755px) {
     .dashboard_admin_panel {
-      
+
         width: 76%;
     }
+
     .page-heading-div {
         width: 80%;
-       
+
     }
-   
+
 }
+
 @media only screen and (max-width:548px) {
     .grid_admin_index {
-        grid-template-columns: 270px ;
+        grid-template-columns: 270px;
 
-    } 
+    }
 }
+
 @media only screen and (max-width:364px) {
-    
-    .grid_admin_index {
-        grid-template-columns: 250px ;
 
-    } 
+    .grid_admin_index {
+        grid-template-columns: 250px;
+
+    }
 }
+
 /* dashboard done ⬆️⬆️⬆️⬆️ */
 
 
@@ -164,31 +173,35 @@ body {
 
 
 
-.customer_details_main_div{
+.customer_details_main_div {
     margin-top: 55px;
     width: 100%;
     height: fit-content;
     /* border: 1px solid green; */
 }
 
-th,td{
+th,
+td {
     font-size: 0.8rem;
 }
 
-tr,th,td{
+tr,
+th,
+td {
     border: 1px solid #000000;
 }
 
-.table{
+.table {
     width: 100%;
     background-color: white;
-    
+
 }
+
 /* table ⬆️⬆️⬆️ */
 
 
 
-.search-filter-div{
+.search-filter-div {
     /* border: 1px solid red; */
     width: 100%;
     height: fit-content;
@@ -197,7 +210,8 @@ tr,th,td{
     align-items: center;
     margin-top: 20px;
 }
-.search_inp_filter{
+
+.search_inp_filter {
     outline: 0;
     border: 0;
     background-color: transparent;
@@ -208,18 +222,97 @@ tr,th,td{
 
 
 
+.products_form_div {
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_form {
+    width: 35%;
+    height: 100%;
+    /* border: 1px solid green; */
+    box-shadow: 10px 5px 10px 2px grey;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add_prod_heading_div {
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 100%;
+}
+
+.add_prod_heading {
+    font-size: 2rem;
+}
+
+.add_prod_input_div {
+    width: 90%;
+}
+
+.inp_div {
+    /* border: 1px solid green; */
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.product_inputs {
+    width: 100%;
+    padding: 5px 0px 5px 5px;
+    margin-top: 5px;
+    /* outline: 0;
+    border: 0; */
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+#product_description {
+    padding: 5px 0px 25px 5px;
+}
 
 
+.add_prod_btn_div {
+    width: 90%;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    text-align: center;
+}
+
+.add_product_btn {
+    background-color: black;
+    color: white;
+    width: 110px;
+    height: 30px;
+    border: 1px solid black;
+    outline: 0;
+}
+
+.add_product_btn:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.add_product_btn:focus {
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.336);
+}
+
+/* add products form done */
 
 
-
-
-
-
-
-
-
-
+.add_products_table{
+    margin-top: 100px;
+}
 
 
 

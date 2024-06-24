@@ -9,6 +9,41 @@ if (!isset($_SESSION['Adminlogid'])) {
 
 
 ?>
+<?php
+
+if (isset($_POST['add_product'])) {
+    $product_name = $_POST['product_name'];
+    $product_price = $_POST['product_price'];
+    $No_Discount_price = $_POST['No_Discount_price'];
+    $product_description = $_POST['product_description'];
+    $product_image = $_FILES['product_image']['name'];
+    $product_image_tmp_name = $_FILES['product_image']['tmp_name'];
+    $product_image_folder = 'uploaded_img/' . $product_image;
+
+
+
+    if (empty($product_name) || empty($product_price) || empty($product_image)) {
+        $message[] = 'please fill form';
+    } else {
+        $insert = "INSERT INTO `main_products`(`product_name`, `product_price`,`No_Discount_price`, `product_description`, `product_image`) VALUES ('$product_name','$product_price','$No_Discount_price','$product_description','$product_image')";
+        $upload = mysqli_query($con, $insert);
+        if ($upload) {
+            move_uploaded_file($product_image_tmp_name, $product_image_folder);
+            $message[] = 'new product added';
+        } else {
+            $message[] = 'could not add new product';
+        }
+    }
+};
+
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    mysqli_query($con, "DELETE FROM `main_products` WHERE product_id =$id");
+    header('location:ADD_PRODUCT.php');
+}
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +51,7 @@ if (!isset($_SESSION['Adminlogid'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
     <style>
         <?php
@@ -44,23 +80,117 @@ if (!isset($_SESSION['Adminlogid'])) {
         <!-- logout btn and page header ⬆️⬆️⬆️ -->
 
 
-        
-        
+        <div class="products_form_div">
+
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data" method="post" class="product_form">
+                <div class="add_prod_heading_div">
+                    <h2 class="add_prod_heading">ADD PRODUCT</h2>
+                </div>
+
+                <div class="add_prod_input_div">
+                    <div class="inp_div">
+                        <label for="product_name">Product Name:</label>
+                        <input type="text" id="product_name" name="product_name" class="product_inputs" required>
+                    </div>
+
+                    <div class="inp_div">
+                        <label for="product_price">Product price:</label>
+                        <input type="text" id="product_price" name="product_price" class="product_inputs" required>
+                    </div>
+
+                    <div class="inp_div">
+                        <label for="No_Discount_price">Product price (no discount):</label>
+                        <input type="text" id="No_Discount_price" name="No_Discount_price" class="product_inputs" required>
+                    </div>
+
+                    <div class="inp_div">
+                        <label for="product_description">Product description:</label>
+                        <input type="text" id="product_description" name="product_description" class="product_inputs" required>
+                    </div>
+
+                    <div class="inp_div">
+                        <label for="product_image">Product image:</label>
+                        <input type="file" accept=".png,.jpg,.svg" id="product_image" name="product_image" class="product_inputs" required>
+                    </div>
+
+                </div>
+
+                <div class="add_prod_btn_div">
+                    <button type="submit" name="add_product" class="add_product_btn">submit</button>
+                </div>
+
+
+            </form>
+
+        </div>
+        <!-- add product form ⬆️⬆️⬆️⬆️ -->
+
+        <?php
+
+        $select = mysqli_query($con, "SELECT * FROM main_products");
+
+        ?>
+
+
+        <table class="table add_products_table">
+
+
+            <thead class="text-center">
+                <tr>
+
+                    <th width="10%" scope="col">productid</th>
+                    <th width="15%" scope="col">product image</th>
+                    <th width="15%" scope="col">product name</th>
+                    <th width="10%" scope="col">product price</th>
+                    <th width="10%" scope="col">price (no discount)</th>
+                    <th width="35%" scope="col">product description</th>
+                    <th width="20%" scope="col">action</th>
+                </tr>
+            </thead>
+
+            <?Php
+
+            while ($row = mysqli_fetch_assoc($select)) {
+
+            ?>
 
 
 
 
+                <tr class='align-middle'>
+                    <td><?php echo $row['product_id'] ?></td>
+                    <td><img src="uploaded_img/<?php echo $row['product_image']; ?>" height="120px"></td>
+                    <td><?php echo $row['product_name'] ?></td>
+                    <td>RS <?php echo $row['product_price'] ?></td>
+                    <td>RS <?php echo $row['No_Discount_price'] ?></td> 
+                    <td><?php echo $row['product_description'] ?></td>
+                    <td>
+                        <a href="products_update.php?edit=<?php echo $row['product_id']; ?>"><button class="EDIT">EDIT</button></a>
+                        <a href="ADD_PRODUCT.php?delete=<?php echo $row['product_id']; ?>"><button class="DELETE">delete</button></a>
+                    </td>
+
+                </tr>
+
+
+            <?Php
+
+
+            };
+
+            ?>
 
 
 
 
-
+            </tbody>
+        </table>
 
 
 
 
 
     </section>
+
 
 
 

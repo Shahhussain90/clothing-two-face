@@ -49,16 +49,25 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
 
             <div class="home-cards" id="home-cards">
-
-
-
                 <div class="card-image-div">
                     <div class="new-tag">
                         <div class="new-txt">NEW</div>
                     </div>
+                    <?php
 
-                    <img src="IMAGES/shirt-1.jpg" class="shirt-div" alt="">
+                    $select = mysqli_query($con, "SELECT * FROM main_products");
+
+                    ?>
+                    <?Php
+
+                    while ($row = mysqli_fetch_assoc($select)) {
+
+                    ?>
+
+                        <img src="ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="" />
                 </div>
+
+
 
 
                 <div class="shirt-details">
@@ -69,9 +78,9 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                         <div class="btn-dic-atc">
                             <form action="FILES/manage_cart.php" method="post" class="add-to-cart-form">
 
-                                <input type="hidden" name="product_id" value="3">
-                                <input type="hidden" name="product_name" value=" T-shirt">
-                                <input type="hidden" name="product_price" value="150">
+                                <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ?>">
+                                <input type="hidden" name="product_name" value="<?php echo $row['product_name'] ?>">
+                                <input type="hidden" name="product_price" value="<?php echo $row['product_price'] ?>">
 
 
                                 <div class="radio-boxes">
@@ -92,11 +101,11 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                     </div>
 
                     <div class="INFO" id="INFO">
-                        <h2 class="shirt-name">men graphic T-shirt</h2>
+                        <h2 class="shirt-name"><?php echo $row['product_name'] ?></h2>
                         <div class="strike-align">
-                            <h3 class="shirt-price">RS.150w0</h3> &nbsp;
+                            <h3 class="shirt-price">RS <?php echo $row['product_price'] ?></h3> &nbsp;
                             <strike>
-                                <h3 class="shirt-price">RS.2500</h3>
+                                <h3 class="shirt-price">RS <?php echo $row['No_Discount_price'] ?></h3>
                             </strike>
                         </div>
                         <div>rating</div>
@@ -105,6 +114,12 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
 
                 </div>
+            <?Php
+
+
+                    };
+
+            ?>
             </div>
 
         </div>

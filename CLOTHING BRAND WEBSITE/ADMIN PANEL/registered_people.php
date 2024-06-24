@@ -36,7 +36,7 @@ if (!isset($_SESSION['Adminlogid'])) {
 
         <div class="logout_div">
             <div class="page-heading-div">
-                <h1>Customer details</h1>
+                <h1>Registered people</h1>
             </div>
             <form method="post" class="logout-btn-form">
                 <button type="submit" name="LogOut" class="logout_button">logout</button>
