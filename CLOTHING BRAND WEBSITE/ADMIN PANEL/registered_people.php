@@ -54,11 +54,11 @@ if (!isset($_SESSION['Adminlogid'])) {
             <table class="table" id="myTable">
                 <thead class="text-center">
                     <tr>
-                        <th scope="col" width="100px">id</th>
-                        <th scope="col">username</th>
-                        <th scope="col">email</th>
+                        <th scope="col" width="10%">id</th>
+                        <th scope="col" width="20%">username</th>
+                        <th scope="col" width="40%">email</th>
                         
-                        <th scope="col" width="70px">TIME</th>
+                        <th scope="col" width="20%">TIME</th>
                         
                     </tr>
                 </thead>
@@ -74,7 +74,7 @@ if (!isset($_SESSION['Adminlogid'])) {
                         <td>$user_fetch[email]</td>
                         
                         <td>$user_fetch[DATE_TIME]</td>
-                        <td>@mdo</td>
+                       
                       
                     </tr>
                     ";

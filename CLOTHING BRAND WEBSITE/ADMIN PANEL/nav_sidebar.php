@@ -38,6 +38,10 @@
             </div >
             <div class="admin_nav_links_divs">
                 <a href="ADD_PRODUCT.php" class="admin_nav_links"><i class='bx bxs-t-shirt admin_icons'></i></i> Add products</a>
+            </div>
+
+            <div class="admin_nav_links_divs">
+                <a href="all_products.php" class="admin_nav_links"><i class='bx bxs-t-shirt admin_icons'></i></i> Add products (all)</a>
             </div >
 
         </div>

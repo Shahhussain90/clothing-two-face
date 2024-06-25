@@ -30,6 +30,7 @@ body {
 }
 
 
+
 .page-heading-div {
     height: fit-content;
     width: 90%;
@@ -231,6 +232,9 @@ td {
     justify-content: center;
     align-items: center;
 }
+#products_form_div{
+    height: 650px;
+}
 
 .product_form {
     width: 35%;
@@ -311,9 +315,8 @@ td {
 
 
 .add_products_table{
-    margin-top: 100px;
+    margin-top: 50px;
 }
-
 
 
 

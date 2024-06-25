@@ -79,7 +79,7 @@ if (!isset($_SESSION['Adminlogid'])) {
                         <td>$user_fetch[customer_order_quantity]</td>
                         <td>$user_fetch[DATE_TIME]</td>
                         
-                        <td>@mdo</td>
+                        
                       
                     </tr>
                     ";

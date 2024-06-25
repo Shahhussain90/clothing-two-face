@@ -55,7 +55,7 @@
 
                 <div class="list-div2">
                     <li class="normal-header-list list">
-                        <a href="" class="search-anchor">search <i class='bx bx-search'></i></a>
+                        <a href="FILES/ALL_SHIRTS_COLLECTION.php" class="search-anchor">search <i class='bx bx-search'></i></a>
                     </li>
                     <li class="normal-header-list cart-ANCHOR-list ">
                         <a href="FILES/ADD_TO_CART.php" class="cart-ANCHOR"><i class='bx bx-cart'></i></a>

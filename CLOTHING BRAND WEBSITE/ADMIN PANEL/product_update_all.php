@@ -20,7 +20,7 @@ if (isset($_POST['update_product'])) {
        $message[]='please fill form';
     }
     else{
-        $update = "UPDATE `main_products` SET product_name='$product_name',product_price='$product_price',No_Discount_price='$No_Discount_price',product_description='$product_description',product_alt_text='$product_alt_text',product_image='$product_image'
+        $update = "UPDATE `all_products` SET product_name='$product_name',product_price='$product_price',No_Discount_price='$No_Discount_price',product_description='$product_description',product_alt_text='$product_alt_text',product_image='$product_image'
         WHERE product_id=$id";
         $upload = mysqli_query($con,$update);
         if($upload){
@@ -58,7 +58,7 @@ if (isset($_POST['update_product'])) {
 
             <?php 
 
-                $select = mysqli_query($con,"SELECT * FROM main_products WHERE product_id = $id");
+                $select = mysqli_query($con,"SELECT * FROM all_products WHERE product_id = $id");
                 while($row = mysqli_fetch_assoc($select)){
 
                 

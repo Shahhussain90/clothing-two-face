@@ -28,7 +28,7 @@ if (isset($_POST['add_product'])) {
     if (empty($product_name) || empty($product_price) || empty($product_image)) {
         $message[] = 'please fill form';
     } else {
-        $insert = "INSERT INTO `main_products`(`product_name`, `product_price`,`No_Discount_price`, `product_description`,`product_alt_text`, `product_image`) VALUES ('$product_name','$product_price','$No_Discount_price','$product_description','$product_alt_text','$product_image')";
+        $insert = "INSERT INTO `all_products`(`product_name`, `product_price`,`No_Discount_price`, `product_description`,`product_alt_text`, `product_image`) VALUES ('$product_name','$product_price','$No_Discount_price','$product_description','$product_alt_text','$product_image')";
         $upload = mysqli_query($con, $insert);
         if ($upload) {
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
@@ -41,8 +41,8 @@ if (isset($_POST['add_product'])) {
 
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
-    mysqli_query($con, "DELETE FROM `main_products` WHERE product_id =$id");
-    header('location:ADD_PRODUCT.php');
+    mysqli_query($con, "DELETE FROM `all_products` WHERE product_id =$id");
+    header('location:all_products.php');
 }
 
 
@@ -74,7 +74,7 @@ if (isset($_GET['delete'])) {
 
         <div class="logout_div">
             <div class="page-heading-div">
-                <h1>ADD PRODUCT</h1>
+                <h1>ALL PRODUCTS</h1>
             </div>
             <form method="post" class="logout-btn-form">
                 <button type="submit" name="LogOut" class="logout_button">logout</button>
@@ -136,7 +136,7 @@ if (isset($_GET['delete'])) {
 
         <?php
 
-        $select = mysqli_query($con, "SELECT * FROM main_products");
+        $select = mysqli_query($con, "SELECT * FROM all_products");
 
         ?>
         
@@ -181,7 +181,7 @@ if (isset($_GET['delete'])) {
 
                     <td>
                         <a href="products_update.php?edit=<?php echo $row['product_id']; ?>"><button class="EDIT">EDIT</button></a>
-                        <a href="ADD_PRODUCT.php?delete=<?php echo $row['product_id']; ?>"><button class="DELETE">delete</button></a>
+                        <a href="all_products.php?delete=<?php echo $row['product_id']; ?>"><button class="DELETE">delete</button></a>
                     </td>
 
                 </tr>
@@ -228,5 +228,4 @@ if (isset($_GET['delete'])) {
      <script src="filter.js"></script>
 
 </body>
-
 </html>

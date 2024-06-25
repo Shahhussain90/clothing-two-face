@@ -1,17 +1,10 @@
 <?php
-include "FILES/config.php";
+include "config.php";
 session_start();
-// if (!isset($_SESSION['email'])) {
-//     header('location:FILES/LOGIN.php');
-// }
-if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
-    $id = $_COOKIE['email'];
-    $pass = $_COOKIE['password'];
-} else {
-    $id = "";
-    $pass = "";
-}
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,11 +15,12 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/other.css">
     <style>
-        <?php include "css/index.css" ?>
+        <?php include "../css/ALL_SHIRTS_COLLECTION.css" ?>
     </style>
-    <title></title>
+
+    <title>Document</title>
 </head>
 
 <body>
@@ -34,19 +28,15 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
     include "header.php";
     ?>
 
+    <div class="search-filter-div">
+        <i class='bx bx-search-alt-2'></i> <input type="text" id="searchInput" class="search_inp_filter" onkeyup="filterProducts()" placeholder="Search for products...">
+    </div>
 
 
-    <section class="section-1">
-
-    </section>
-
-
-
-
-    <section class="shopping-cards-home grid-main">
+    <section class="shopping-cards-home grid-main all-shirts-sec">
         <?php
 
-        $select = mysqli_query($con, "SELECT * FROM main_products");
+        $select = mysqli_query($con, "SELECT * FROM all_products");
 
         while ($row = mysqli_fetch_assoc($select)) {
 
@@ -62,7 +52,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                         </div>
 
 
-                        <img src="ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" />
+                        <img src="../ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" />
                     </div>
 
 
@@ -74,7 +64,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                         <div class="shirt-hover-div" id="shirt-hover-div">
 
                             <div class="btn-dic-atc">
-                                <form action="FILES/manage_cart.php" method="post" class="add-to-cart-form">
+                                <form action="manage_cart.php" method="post" class="add-to-cart-form">
 
                                     <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ?>">
                                     <input type="hidden" name="product_name" value="<?php echo $row['product_name'] ?>">
@@ -125,35 +115,6 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
 
     </section>
-    <!-- products section 🔼🔼🔼🔼🔼🔼 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="email-subscribe-div">
-        <div class="email-text">Subscribe to the Two FACE Email
-            to be notified of limited discounts and
-            important news.</div>
-
-        <form action="" class="subscribe-email-form">
-            <input type="email" placeholder="ENTER YOUR EMAIL" class="subscribe-email">
-            <button type="submit" class="subscribe-email-button">SUBSCRIBE</button>
-        </form>
-
-    </div>
-    <!-- subscribe  🔼🔼🔼🔼🔼🔼-->
 
 
 
@@ -164,28 +125,28 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
     <?php
     include "footer.php";
     ?>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
     <script>
-        $(document).ready(function() {
+        function filterProducts() {
+            // Get the value of the input field
+            let input = document.getElementById('searchInput').value.toLowerCase();
 
-            // $(".home-cards").mouseenter(function(){
-            //     $(".shirt-hover-div").fadeIn(700);
-            //     $(".INFO").hide(0);
+            // Get all product cards
+            let productCards = document.getElementsByClassName('shopping-cards-div-home');
 
-            // })
-            // $(".home-cards").mouseleave(function(){
-            //     $(".shirt-hover-div").hide(0);
-            //     $(".INFO").fadeIn(700);
+            // Loop through the product cards and hide those that don't match the search query
+            for (let i = 0; i < productCards.length; i++) {
+                let productName = productCards[i].getElementsByClassName('shirt-name')[0].innerText.toLowerCase();
 
-            // })
-
-
-
-
-
-
-        })
+                if (productName.indexOf(input) > -1) {
+                    productCards[i].style.display = '';
+                } else {
+                    productCards[i].style.display = 'none';
+                }
+            }
+        }
     </script>
+
 
 
 </body>
