@@ -55,12 +55,12 @@ if (!isset($_SESSION['Adminlogid'])) {
                 <thead class="text-center">
                     <tr>
                         <th scope="col" width="100px">id</th>
-                        <th scope="col">order id</th>
+                        <th scope="col" width="90px">order id</th>
                         <th scope="col">Product Name</th>
-                        <th scope="col">order price</th>
+                        <th scope="col" width="120px">order price</th>
                         <th scope="col" width="90px">order size</th>
                         <th scope="col" width="70px">order quantity</th>
-                        <th scope="col" >TIME</th>
+                        <th scope="col" width="130px" >TIME</th>
                     
                     </tr>
                 </thead>
@@ -74,13 +74,11 @@ if (!isset($_SESSION['Adminlogid'])) {
                         <td>$user_fetch[id]</td>
                         <td>$user_fetch[customer_order_id]</td>
                         <td>$user_fetch[customer_order_Product_Name]</td>
-                        <td>$user_fetch[customer_order_price]</td>
+                        <td>RS $user_fetch[customer_order_price]</td>
                         <td>$user_fetch[customer_order_size]</td>
                         <td>$user_fetch[customer_order_quantity]</td>
                         <td>$user_fetch[DATE_TIME]</td>
                         
-                        
-                      
                     </tr>
                     ";
                     } ?>

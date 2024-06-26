@@ -7,7 +7,7 @@ include "config.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['checkout_btn'])) {
 
-        $query_1 = "INSERT INTO `customer_details` (`customer_Name`, `customer_Email`, `customer_Phone`, `customer_Address`, `customer_delivery_type`, `COD`, `PAYMENT`) VALUES ('$_POST[Customer_Full_name]','$_POST[Customer_Email]','$_POST[Customer_Phone_number]','$_POST[Customer_Address]','$_POST[delivery_type]','$_POST[cash_on_delivery]','$_POST[total_delivery_cost]')";
+        $query_1 = "INSERT INTO `customer_details` (`customer_Name`, `customer_Email`, `customer_Phone`, `customer_Address`, `customer_delivery_type`, `COD`, `PAYMENT`,`product_status`) VALUES ('$_POST[Customer_Full_name]','$_POST[Customer_Email]','$_POST[Customer_Phone_number]','$_POST[Customer_Address]','$_POST[delivery_type]','$_POST[cash_on_delivery]','$_POST[total_delivery_cost]','$_POST[status_of_product]')";
        
         
         

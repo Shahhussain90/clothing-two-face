@@ -157,6 +157,7 @@ if (isset($_GET['delete'])) {
                     <th width="10%" scope="col">product price</th>
                     <th width="10%" scope="col">price (no discount)</th>
                     <th width="35%" scope="col">product description</th>
+                    <th width="10%" scope="col">product alt text</th>
                     <th width="20%" scope="col">action</th>
                 </tr>
             </thead>

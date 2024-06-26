@@ -61,8 +61,9 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                             <div class="new-txt">NEW</div>
                         </div>
 
-
-                        <img src="ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" />
+                    
+                       <a href="FILES/PRODUCT.php?product=<?php echo $row['product_id']; ?>"> <img src="ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" /></a>
+                    
                     </div>
 
 

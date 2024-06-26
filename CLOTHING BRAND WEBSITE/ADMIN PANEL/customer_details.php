@@ -8,8 +8,11 @@ if (!isset($_SESSION['Adminlogid'])) {
 }
 
 
-?>
 
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +49,7 @@ if (!isset($_SESSION['Adminlogid'])) {
 
 
         <div class="search-filter-div">
-          <i class='bx bx-search-alt-2'></i> <input type="text" id="myinput" class="search_inp_filter" onkeyup="searchTable()" placeholder="search">
+            <i class='bx bx-search-alt-2'></i> <input type="text" id="myinput" class="search_inp_filter" onkeyup="searchTable()" placeholder="search">
         </div>
 
         <div class="customer_details_main_div">
@@ -63,6 +66,7 @@ if (!isset($_SESSION['Adminlogid'])) {
                         <th scope="col" width="70px">COD</th>
                         <th scope="col" width="100px">PAYMENT</th>
                         <th scope="col">TIME</th>
+                        <th scope="col">STATUS</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
@@ -79,9 +83,9 @@ if (!isset($_SESSION['Adminlogid'])) {
                         <td>$user_fetch[customer_Address]</td>
                         <td>$user_fetch[customer_delivery_type]</td>
                         <td>$user_fetch[COD]</td>
-                        <td>$user_fetch[PAYMENT]</td>
+                        <td>RS $user_fetch[PAYMENT]</td>
                         <td>$user_fetch[DATE_TIME]</td>
-                        <td>@mdo</td>
+                        <td>$user_fetch[product_status]</td>
                       
                     </tr>
                     ";

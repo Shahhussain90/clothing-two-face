@@ -131,6 +131,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
                 <div class="checkout_btn_div">
                     <button type="submit" class="checkout_btn" name="checkout_btn">submit</button>
+                    <input type="hidden" name="status_of_product" value="pending">
                 </div>
 
 
