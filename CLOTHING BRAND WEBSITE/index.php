@@ -134,6 +134,28 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
 
 
+    <section class="disclaimer">
+
+        <div class="disclaimer_boxes">
+            <i class="fa fa-truck" id="discliamer-icon" aria-hidden="true"></i>
+            <h6 class="disclaimer-h">Free Shipping</h6>
+            <p class="disclaimer-p">Get Free Shipping on all orders over RS.8000</p>
+        </div>
+
+        <div class="disclaimer_boxes">
+            <i class='bx bx-support' id="discliamer-icon"></i>
+            <h6 class="disclaimer-h">Customer service</h6>
+            <p class="disclaimer-p">contact us any time you need us!</p>
+        </div>
+        <div class="disclaimer_boxes">
+            <i class='bx bxs-package' id="discliamer-icon"></i>
+            <h6 class="disclaimer-h">Delivery time</h6>
+            <p class="disclaimer-p">Get your delivery in less than 7 days</p>
+        </div>
+
+    </section>
+
+    <!-- disclaimer ⬆️⬆️⬆️⬆️⬆️ -->
 
 
 

@@ -13,6 +13,8 @@ if (isset($_GET['product'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         <?php include "../css/product.css" ?>
     </style>
@@ -29,70 +31,74 @@ if (isset($_GET['product'])) {
     if ($row = mysqli_fetch_assoc($select)) {
 
     ?>
-        <section class="shopping-cards-home grid-main">
+        <section class="product-section-main">
 
-            <div class="shopping-cards-div-home">
-
-
-              
-    
-                        <a href="FILES/PRODUCT.php?product=<?php echo $row['product_id']; ?>"> <img src="../ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" /></a>
-
-                
-
-
-
-
-                    <div class="shirt-details">
-
-
-                        <div class="shirt-hover-div" id="shirt-hover-div">
-
-                            <div class="btn-dic-atc">
-                                <form action="FILES/manage_cart.php" method="post" class="add-to-cart-form">
-
-                                    <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ?>">
-                                    <input type="hidden" name="product_name" value="<?php echo $row['product_name'] ?>">
-                                    <input type="hidden" name="product_price" value="<?php echo $row['product_price'] ?>">
-
-
-                                    <div class="radio-boxes">
-                                        <label for="product_sizes" class="radio-labels">S</label>
-                                        <input type="radio" class="radios" value="small" name="product_sizes" required>
-
-                                        <label for="product_sizes" class="radio-labels">M</label>
-                                        <input type="radio" class="radios" value="medium" name="product_sizes" required>
-
-                                        <label for="product_sizes" class="radio-labels">L</label>
-                                        <input type="radio" class="radios" value="large" name="product_sizes" required>
-                                    </div>
-
-                                    <button type="submit" name="add_to_cart" class="shirt-cart-btn">Add To Cart</button>
-
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="INFO" id="INFO">
-                            <h2 class="shirt-name"><?php echo $row['product_name'] ?></h2>
-                            <div class="strike-align">
-                                <h3 class="shirt-price">RS <?php echo $row['product_price'] ?></h3> &nbsp;
-                                <strike>
-                                    <h3 class="shirt-price">RS <?php echo $row['No_Discount_price'] ?></h3>
-                                </strike>
-                            </div>
-                            <div>rating</div>
-                        </div>
-
-
-
-                    </div>
-
+            <div class="product-section-image">
+                <div class="prod-img-div">
+                    <a href="PRODUCT.php?product=<?php echo $row['product_id']; ?>"> <img src="../ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-img" alt="<?php echo $row['product_alt_text']; ?>" /></a>
                 </div>
-
             </div>
 
+            <div class="product-info-section">
 
+                <div class="product-heading">
+                    <h1 class="product-name"><?php echo $row['product_name']; ?></h1>
+                </div>
+
+                <div class="product-price-div">
+                    <h5 class="product-price">RS <?php echo $row['product_price'] ?></h5>
+                    &nbsp;&nbsp;
+                    <strike>
+                        <h5 class="product-price-discount">RS <?php echo $row['No_Discount_price'] ?></h5>
+                    </strike>
+                </div>
+
+                <div class="product-info-div">
+                    <p>500 letters Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat,
+                        exercitationem harum reiciendis quaerat dicta necessitatibus modi facere
+                        nemo veniam porro quos eius inventore libero voluptatum aperiam earum
+                        perferendis praesentium quo esse officia ducimus doloremque? Reiciendi
+                        s quibusdam voluptates sed quae reprehenderit architecto voluptate dic
+                        ta, adipisci itaque nulla deserunt, atque doloribus optio, explicabo
+                        dignissimos excepturi in harum rerum! Id inventore deserunt quibusdam
+                        delectus reiciendis nobis obcaecati, magnam enim perferendis cum itaq
+                        ue ullam iste maiores exercitationem natus molestiae harum incidunt
+                        rem ad laborum non </p>
+                </div>
+
+                <form action="manage_cart.php" method="post" class="add-to-cart-form">
+
+                    <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ?>">
+                    <input type="hidden" name="product_name" value="<?php echo $row['product_name'] ?>">
+                    <input type="hidden" name="product_price" value="<?php echo $row['product_price'] ?>">
+
+
+                    <div class="radio-boxes">
+                        <!-- <div class="radios-divs"> -->
+                        <label for="product_sizes" class="radio-labels">Small</label>
+                        <input type="radio" class="radios" value="small" name="product_sizes" required>
+                        <!-- </div> -->
+                        <div class="radios-divs">
+                            <label for="product_sizes" class="radio-labels">Medium</label>
+                            <input type="radio" class="radios" value="medium" name="product_sizes" required>
+                        </div>
+
+                        <div class="radios-divs">
+                            <label for="product_sizes" class="radio-labels">Large</label>
+                            <input type="radio" class="radios" value="large" name="product_sizes" required>
+                        </div>
+                    </div>
+
+                    <div class="get-in-days-div">Get it in 7 days</div>
+
+
+                    <button type="submit" name="add_to_cart" class="product-cart-btn">Add To Cart</button>
+
+                </form>
+
+
+
+            </div>
 
         </section>
 
@@ -107,6 +113,55 @@ if (isset($_GET['product'])) {
     };
 
     ?>
+
+
+
+
+
+
+
+
+    <section class="disclaimer">
+
+        <div class="disclaimer_boxes">
+            <i class="fa fa-truck" id="discliamer-icon" aria-hidden="true"></i>
+            <h6 class="disclaimer-h">Free Shipping</h6>
+            <p class="disclaimer-p">Get Free Shipping on all orders over RS.8000</p>
+        </div>
+
+        <div class="disclaimer_boxes">
+            <i class='bx bx-support' id="discliamer-icon"></i>
+            <h6 class="disclaimer-h">Customer service</h6>
+            <p class="disclaimer-p">contact us any time you need us!</p>
+        </div>
+        <div class="disclaimer_boxes">
+            <i class='bx bxs-package' id="discliamer-icon"></i>
+            <h6 class="disclaimer-h">Delivery time</h6>
+            <p class="disclaimer-p">Get your delivery in less than 7 days</p>
+        </div>
+
+    </section>
+
+    <!-- disclaimer ⬆️⬆️⬆️⬆️⬆️ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <?php
     include "footer.php";
