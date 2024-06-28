@@ -52,7 +52,7 @@ session_start();
                         </div>
 
 
-                        <img src="../ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" />
+                        <a href="all_product_pg.php?product=<?php echo $row['product_id']; ?>"> <img src="../ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" /></a>
                     </div>
 
 

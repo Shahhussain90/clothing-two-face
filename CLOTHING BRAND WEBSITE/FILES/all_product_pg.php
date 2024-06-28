@@ -1,9 +1,10 @@
+
 <?php
 include "config.php";
 if (isset($_GET['product'])) {
     $id = $_GET['product'];
 
-    $select = mysqli_query($con, "SELECT * FROM main_products WHERE product_id=$id");
+    $select = mysqli_query($con, "SELECT * FROM all_products WHERE product_id=$id");
 }
 ?>
 
