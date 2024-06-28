@@ -9,6 +9,11 @@ if (!isset($_SESSION['Adminlogid'])) {
 
 
 
+if (isset($_POST['delivery_done'])) {
+    $id = $_POST['delivery_done'];
+    $sql = "UPDATE `customer_details` SET `product_status`='Delivered' WHERE `customer_id`= $id";
+    mysqli_query($con, $sql);
+}
 
 
 
@@ -85,7 +90,13 @@ if (!isset($_SESSION['Adminlogid'])) {
                         <td>$user_fetch[COD]</td>
                         <td>RS $user_fetch[PAYMENT]</td>
                         <td>$user_fetch[DATE_TIME]</td>
-                        <td>$user_fetch[product_status]</td>
+                        <td>
+                        $user_fetch[product_status]
+                         <form method='post' class='delivery_done'>
+                                
+                                <button type='submit' name='delivery_done' class='delivery_done_btn' value='$user_fetch[customer_id]'>confirm</button>
+                            </form>
+                        </td>
                       
                     </tr>
                     ";
