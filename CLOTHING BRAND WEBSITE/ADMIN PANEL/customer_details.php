@@ -13,6 +13,10 @@ if (isset($_POST['delivery_done'])) {
     $id = $_POST['delivery_done'];
     $sql = "UPDATE `customer_details` SET `product_status`='Delivered' WHERE `customer_id`= $id";
     mysqli_query($con, $sql);
+} elseif (isset($_POST['Processing'])) {
+    $idd = $_POST['Processing'];
+    $sql = "UPDATE `customer_details` SET `product_status`='Processing' WHERE `customer_id`= $idd";
+    mysqli_query($con, $sql);
 }
 
 
@@ -92,11 +96,19 @@ if (isset($_POST['delivery_done'])) {
                         <td>$user_fetch[DATE_TIME]</td>
                         <td>
                         $user_fetch[product_status]
-                         <form method='post' class='delivery_done'>
-                                
-                                <button type='submit' name='delivery_done' class='delivery_done_btn' value='$user_fetch[customer_id]'>confirm</button>
+                         
+                        </td>
+                        <td>
+                            <form method='post' class='delivery_done'>
+                                   
+                                    <button type='submit' name='delivery_done' class='delivery_done_btn' value='$user_fetch[customer_id]'>confirm</button>
+                            </form>
+                             <form method='post' class='delivery_done'>
+                                    <button type='submit' name='Processing' class='Processing_btn' value='$user_fetch[customer_id]'>process</button>
+                                    
                             </form>
                         </td>
+                    
                       
                     </tr>
                     ";

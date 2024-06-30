@@ -137,7 +137,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
             </form>
 
-                <!-- checkout form ⬆️⬆️⬆️ -->
+            <!-- checkout form ⬆️⬆️⬆️ -->
 
 
         </div>
@@ -147,7 +147,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
 
 
-
+   
 
 
 
@@ -172,7 +172,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
                 itotal[i].innerText = (iprice[i].value) * (iquantity[i].value);
                 gt = gt + (iprice[i].value * iquantity[i].value);
-                ytotal.value = "subtotal : " + "RS"+ gt;
+                ytotal.value = "subtotal : " + "RS" + gt;
             }
         }
         subtotal();
