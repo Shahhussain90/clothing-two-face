@@ -61,9 +61,9 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                             <div class="new-txt">NEW</div>
                         </div>
 
-                    
-                       <a href="FILES/PRODUCT.php?product=<?php echo $row['product_id']; ?>"> <img src="ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" /></a>
-                    
+
+                        <a href="FILES/PRODUCT.php?product=<?php echo $row['product_id']; ?>"> <img src="ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" /></a>
+
                     </div>
 
 
@@ -170,9 +170,9 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
             to be notified of limited discounts and
             important news.</div>
 
-        <form action="" class="subscribe-email-form">
-            <input type="email" placeholder="ENTER YOUR EMAIL" class="subscribe-email">
-            <button type="submit" class="subscribe-email-button">SUBSCRIBE</button>
+        <form action="FILES/subscribe_email.php" method="post" class="subscribe-email-form">
+            <input type="email" placeholder="ENTER YOUR EMAIL" name="subscribeemail" class="subscribe-email">
+            <button type="submit" class="subscribe-email-button" name="subscribe_email_button">SUBSCRIBE</button>
         </form>
 
     </div>

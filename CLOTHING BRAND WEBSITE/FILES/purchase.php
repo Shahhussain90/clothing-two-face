@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-function sendMail($Customer_Email,$Customer_Full_name)
+function sendMail($Customer_Email, $Customer_Full_name, $Customer_Phone_number, $Customer_Address, $delivery_type, $cash_on_delivery, $total_delivery_cost)
 {
     include "PHPMailer\PHPMailer.php";
     include "PHPMailer\SMTP.php";
@@ -38,6 +38,13 @@ function sendMail($Customer_Email,$Customer_Full_name)
 
         email: $Customer_Email <br>
         name: $Customer_Full_name <br>
+        phone number: $Customer_Phone_number <br>
+        Address: $Customer_Address <br>
+        delivery type: $delivery_type <br>
+        TOTAL:RS $total_delivery_cost <br>
+        $cash_on_delivery
+        <br>
+
 
 
 
@@ -58,16 +65,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $query_1 = "INSERT INTO `customer_details` (`customer_Name`, `customer_Email`, `customer_Phone`, `customer_Address`, `customer_delivery_type`, `COD`, `PAYMENT`,`product_status`) VALUES ('$_POST[Customer_Full_name]','$_POST[Customer_Email]','$_POST[Customer_Phone_number]','$_POST[Customer_Address]','$_POST[delivery_type]','$_POST[cash_on_delivery]','$_POST[total_delivery_cost]','$_POST[status_of_product]')";
 
-        $query = "SELECT * FROM `customer_details` WHERE `customer_Email`='$_POST[Customer_Email]'";
-        mysqli_query($con, $query) && sendMail($_POST['Customer_Email'],$_POST['Customer_Full_name']);
+
+        $query = "SELECT * FROM `customer_details` WHERE `customer_Email`='$_POST[Customer_Email]' AND `customer_Name`='$_POST[Customer_Full_name]' ";
+        mysqli_query($con, $query) && sendMail($_POST['Customer_Email'], $_POST['Customer_Full_name'], $_POST['Customer_Phone_number'], $_POST['Customer_Address'], $_POST['delivery_type'], $_POST['cash_on_delivery'], $_POST['total_delivery_cost']);
 
 
 
 
 
         if (mysqli_query($con, $query_1)) {
-
-
 
 
             $customer_order_id = mysqli_insert_id($con);
@@ -99,8 +105,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-
-
-
-
-
