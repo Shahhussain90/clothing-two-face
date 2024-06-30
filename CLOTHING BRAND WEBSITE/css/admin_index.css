@@ -317,7 +317,9 @@ td {
 .add_products_table{
     margin-top: 50px;
 }
-
+#product_description{
+    width:100%;
+}
 
 
 

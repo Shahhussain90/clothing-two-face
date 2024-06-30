@@ -86,7 +86,7 @@ if (isset($_GET['delete'])) {
 
         <div class="products_form_div" id="products_form_div">
 
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data" method="post" class="product_form">
+            <form id="formmm" action="<?php $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data" method="post" class="product_form">
                 <div class="add_prod_heading_div">
                     <h2 class="add_prod_heading">ADD PRODUCT</h2>
                 </div>
@@ -109,7 +109,8 @@ if (isset($_GET['delete'])) {
 
                     <div class="inp_div">
                         <label for="product_description">Product description:</label>
-                        <input type="text" id="product_description" name="product_description" class="product_inputs" required>
+                        <textarea form="formmm" style="white-space: pre-wrap;" id="product_description" name="product_description" class="product_inputs" required></textarea>
+                        <!-- <input type="text" id="product_description" name="product_description" class="product_inputs" required> -->
                     </div>
 
                     <div class="inp_div">
@@ -177,7 +178,7 @@ if (isset($_GET['delete'])) {
                     <td><?php echo $row['product_name'] ?></td>
                     <td>RS <?php echo $row['product_price'] ?></td>
                     <td>RS <?php echo $row['No_Discount_price'] ?></td> 
-                    <td><?php echo $row['product_description'] ?></td>
+                    <td><textarea name="" id="product_description" readonly><?php echo $row['product_description'] ?></textarea></td>
                     <td><?php echo $row['product_alt_text'] ?></td>
 
                     <td>
