@@ -109,7 +109,7 @@ if (isset($_GET['delete'])) {
 
                     <div class="inp_div">
                         <label for="product_description">Product description:</label>
-                        <textarea form="formmm" style="white-space: pre-wrap;" id="product_description" name="product_description" class="product_inputs" required></textarea>
+                        <textarea form="formmm" cols="66" style="white-space: pre-wrap;" id="product_description" name="product_description" class="product_inputs" required></textarea>
                         <!-- <input type="text" id="product_description" name="product_description" class="product_inputs" required> -->
                     </div>
 
@@ -178,11 +178,11 @@ if (isset($_GET['delete'])) {
                     <td><?php echo $row['product_name'] ?></td>
                     <td>RS <?php echo $row['product_price'] ?></td>
                     <td>RS <?php echo $row['No_Discount_price'] ?></td> 
-                    <td><textarea name="" id="product_description" readonly><?php echo $row['product_description']  ?></textarea></td>
+                    <td><textarea name="" id="product_description" readonly><?php echo $row['product_description'] ?></textarea></td>
                     <td><?php echo $row['product_alt_text'] ?></td>
 
                     <td>
-                        <a href="products_update.php?edit=<?php echo $row['product_id']; ?>"><button class="EDIT">EDIT</button></a>
+                    <a href="products_update.php?edit=<?php echo $row['product_id']; ?>"><button class="EDIT">EDIT</button></a>
                         <a href="all_products.php?delete=<?php echo $row['product_id']; ?>"><button class="DELETE">delete</button></a>
                     </td>
 

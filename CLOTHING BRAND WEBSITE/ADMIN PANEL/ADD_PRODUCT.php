@@ -109,7 +109,7 @@ if (isset($_GET['delete'])) {
 
                     <div class="inp_div">
                         <label for="product_description">Product description:</label>
-                        <textarea form="formmm" style="white-space: pre-wrap;" id="product_description" name="product_description" class="product_inputs" required></textarea>
+                        <textarea form="formmm" cols="66" style="white-space: pre-wrap;" id="product_description" name="product_description" class="product_inputs" required></textarea>
                         <!-- <input type="text" id="product_description" name="product_description" class="product_inputs" required> -->
                     </div>
 

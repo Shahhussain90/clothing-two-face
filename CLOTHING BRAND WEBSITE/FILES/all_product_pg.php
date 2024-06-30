@@ -54,9 +54,7 @@ if (isset($_GET['product'])) {
                     </strike>
                 </div>
 
-                <div class="product-info-div">
-                    <p><?php echo $row['product_description'] ?></p>
-                </div>
+
 
                 <form action="manage_cart.php" method="post" class="add-to-cart-form">
 
@@ -83,12 +81,23 @@ if (isset($_GET['product'])) {
 
                     <div class="get-in-days-div">Get it in 7 days</div>
 
-
-                    <button type="submit" name="add_to_cart" class="product-cart-btn">Add To Cart</button>
-
+                    <div class="product-cart-btn-div">
+                        <button type="submit" name="add_to_cart" class="product-cart-btn">Add To Cart</button>
+                    </div>
                 </form>
 
-        
+                <div class="product-info-div">
+
+                    <textarea name="" id="client_side_textarea" rows="15" cols="68" readonly>
+                        <?php echo $row['product_description'] ?>
+                    </textarea>
+                </div>
+
+                <div class="note-fabric">
+                    <span class="note-heading">NOTE:</span><br>
+                    <span class="note-detail">Color May Be Slightly Different from Product Image because of brightness of your screen.</span><br>
+                    <a href="SHIPPINGANDDELIVERIES.php" class="note-anchor">SHIPPING & DELIVERIES</a>
+                </div>
 
             </div>
 

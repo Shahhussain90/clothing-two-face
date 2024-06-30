@@ -86,8 +86,7 @@ if (isset($_GET['product'])) {
                 </form>
 
                 <div class="product-info-div">
-
-                    <textarea name="" id="client_side_textarea" readonly>
+                    <textarea name="" id="client_side_textarea" rows="15" cols="68" readonly>
                         <?php echo $row['product_description'] ?>
                     </textarea>
                 </div>
