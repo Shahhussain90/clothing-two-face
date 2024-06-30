@@ -142,7 +142,6 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
 
         </div>
 
-
     </section>
 
 
