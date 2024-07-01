@@ -13,12 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['email'] = $email;
             if(isset($_POST['remember_me']))
             {
-                setcookie('email',$_POST['email'],time() + (1*60*60*24*30),"/");
-                setcookie('password',$_POST['password'],time() + (1*60*60*24*30),"/");
+                setcookie('email', $_POST['email'], time() + (1*60*60*24*30), "/");
+                setcookie('password', $_POST['password'], time() + (1*60*60*24*30), "/");
             }
-            else{
-                setcookie('email',"",time() - (1*60*60*24*30));
-                setcookie('password',"",time() - (1*60*60*24*30));
+            else
+            {
+                setcookie('email', "", time() - (1*60*60*24*30), "/");
+                setcookie('password', "", time() - (1*60*60*24*30), "/");
             }
             header("Location: ../index.php");
             
