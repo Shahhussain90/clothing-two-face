@@ -378,6 +378,10 @@ body {
     font-weight: 600;
 
 }
+.sidebar-anchor:hover{
+    color: #eb2c33;
+
+}
 
 .ph-wa-anchor:hover,
 .account-anchor:hover,

@@ -29,10 +29,10 @@
         </div>
 
         <div class="account-icon-div">
-            <a href="" class="account-anchor">
+            <a href="REGISTER.php" class="account-anchor">
                 <div><i class="fa fa-user" aria-hidden="true"></i> register</div>
             </a>&nbsp;&nbsp;&nbsp;
-            <a href="" class="account-anchor">
+            <a href="LOGIN.php" class="account-anchor">
                 <div><i class="fa fa-user" aria-hidden="true"></i> Login</div>
             </a>
         </div>
@@ -58,7 +58,7 @@
                         <a href="ALL_SHIRTS_COLLECTION.php" class="search-anchor">search <i class='bx bx-search'></i></a>
                     </li>
                     <li class="normal-header-list cart-ANCHOR-list ">
-                        <a href="" class="cart-ANCHOR"><i class='bx bx-cart'></i></a>
+                        <a href="ADD_TO_CART.php" class="cart-ANCHOR"><i class='bx bx-cart'></i></a>
                     </li>
 
                     <li class="normal-header-list list3"><i class="fa fa-bars" id="bar" aria-hidden="true"></i></li>
@@ -82,18 +82,18 @@
             </div>
 
             <div class="sidebar-options-div">
-                <div><a href="" class="sidebar-anchor">VIEW ALL COLLECTIONS</a></div>
-                <div><a href="" class="sidebar-anchor">T-SHIRTS</a></div>
+                <div><a href="ALL_SHIRTS_COLLECTION.php" class="sidebar-anchor">VIEW ALL COLLECTIONS</a></div>
+                <!-- <div><a href="" class="sidebar-anchor">T-SHIRTS</a></div> -->
                 <br>
                 <div><a href="../index.php" class="sidebar-anchor">HOME</a></div>
                 <div><a href="ABOUT-US.php" class="sidebar-anchor">ABOUT US</a></div>
                 <div><a href="PAYMENT-METHOD.php" class="sidebar-anchor">PAYMENT</a></div>
 
-                <div><a href="" class="sidebar-anchor">register</a></div>
-                <div><a href="" class="sidebar-anchor">login</a></div>
+                <div><a href="REGISTER.php" class="sidebar-anchor">register</a></div>
+                <div><a href="LOGIN.php" class="sidebar-anchor">login</a></div>
 
-                <div><a href="" class="sidebar-anchor"><i class='bx bxs-phone'></i>0322 3382744</a></div>
-                <div><a href="" class="sidebar-anchor"><i class='bx bxl-whatsapp'></i>+92 322 3382744</a></div>
+                <div><a href="../index.php" class="sidebar-anchor"><i class='bx bxs-phone'></i>0322 3382744</a></div>
+                <div><a href="../index.php" class="sidebar-anchor"><i class='bx bxl-whatsapp'></i>+92 322 3382744</a></div>
 
 
 

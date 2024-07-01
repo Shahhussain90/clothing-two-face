@@ -64,7 +64,7 @@ if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                                      
                                     <td>$value[product_sizes]</td>
                                     <form method='post' action='manage_cart.php'>
-                                        <td><input type='number' min='0' max='15' class='iquantity text-center' onchange='this.form.submit()' name='mod_quantity' value='$value[product_quantity]'></td>
+                                        <td><input type='number' min='0' max='25' class='iquantity text-center' onchange='this.form.submit()' name='mod_quantity' value='$value[product_quantity]'></td>
                                         <input type='hidden' name='product_name' value='$value[product_name]'>
                                          <input type='hidden' name='product_sizes' value='$value[product_sizes]'>
                                    </form>

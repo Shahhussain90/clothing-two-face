@@ -11,10 +11,13 @@ if (!isset($_SESSION['Adminlogid'])) {
 
 if (isset($_POST['delivery_done'])) {
     $id = $_POST['delivery_done'];
+    echo "<script>alert('confirm order delivered')</script>";
     $sql = "UPDATE `customer_details` SET `product_status`='Delivered' WHERE `customer_id`= $id";
     mysqli_query($con, $sql);
 } elseif (isset($_POST['Processing'])) {
     $idd = $_POST['Processing'];
+    echo "<script>alert('confirm order processing')</script>";
+
     $sql = "UPDATE `customer_details` SET `product_status`='Processing' WHERE `customer_id`= $idd";
     mysqli_query($con, $sql);
 }
