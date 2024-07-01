@@ -47,9 +47,9 @@ session_start();
 
                 <div class="home-cards" id="home-cards">
                     <div class="card-image-div">
-                        <div class="new-tag">
+                        <!-- <div class="new-tag">
                             <div class="new-txt">NEW</div>
-                        </div>
+                        </div> -->
 
 
                         <a href="all_product_pg.php?product=<?php echo $row['product_id']; ?>"> <img src="../ADMIN PANEL/uploaded_img/<?php echo $row['product_image']; ?>" class="shirt-div" alt="<?php echo $row['product_alt_text']; ?>" /></a>
@@ -96,7 +96,7 @@ session_start();
                                     <h3 class="shirt-price">RS <?php echo $row['No_Discount_price'] ?></h3>
                                 </strike>
                             </div>
-                            <div>rating</div>
+                            <!-- <div>rating</div> -->
                         </div>
 
 

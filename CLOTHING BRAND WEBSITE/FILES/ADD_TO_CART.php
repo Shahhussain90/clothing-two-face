@@ -4,13 +4,7 @@ session_start();
 if (!isset($_SESSION['email'])) {
     header('location:LOGIN.php');
 }
-if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
-    $id = $_COOKIE['email'];
-    $pass = $_COOKIE['password'];
-} else {
-    $id = "";
-    $pass = "";
-}
+
 ?>
 
 <!DOCTYPE html>
