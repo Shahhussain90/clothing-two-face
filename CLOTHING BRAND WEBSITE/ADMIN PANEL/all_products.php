@@ -17,6 +17,7 @@ if (isset($_POST['add_product'])) {
     $No_Discount_price = $_POST['No_Discount_price'];
     $product_description = $_POST['product_description'];
     $product_alt_text = $_POST['product_alt_text'];
+    $fabric = $_POST['fabric'];
 
     
     $product_image = $_FILES['product_image']['name'];
@@ -28,7 +29,7 @@ if (isset($_POST['add_product'])) {
     if (empty($product_name) || empty($product_price) || empty($product_image)) {
         $message[] = 'please fill form';
     } else {
-        $insert = "INSERT INTO `all_products`(`product_name`, `product_price`,`No_Discount_price`, `product_description`,`product_alt_text`, `product_image`) VALUES ('$product_name','$product_price','$No_Discount_price','$product_description','$product_alt_text','$product_image')";
+        $insert = "INSERT INTO `all_products`(`product_name`, `product_price`,`No_Discount_price`, `product_description`,`product_alt_text`,`fabric`, `product_image`) VALUES ('$product_name','$product_price','$No_Discount_price','$product_description','$product_alt_text','$fabric','$product_image')";
         $upload = mysqli_query($con, $insert);
         if ($upload) {
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
@@ -119,6 +120,11 @@ if (isset($_GET['delete'])) {
                     </div>
 
                     <div class="inp_div">
+                        <label for="fabric">fabric</label>
+                        <input type="text" id="fabric" name="fabric" class="product_inputs" required>
+                    </div>
+
+                    <div class="inp_div">
                         <label for="product_image">Product image:</label>
                         <input type="file" accept=".png,.jpg,.svg" id="product_image" name="product_image" class="product_inputs" required>
                     </div>
@@ -152,13 +158,14 @@ if (isset($_GET['delete'])) {
             <thead class="text-center">
                 <tr>
 
-                    <th width="10%" scope="col">productid</th>
-                    <th width="15%" scope="col">product image</th>
+                    <th width="6%" scope="col">productid</th>
+                    <th width="10%" scope="col">product image</th>
                     <th width="15%" scope="col">product name</th>
-                    <th width="10%" scope="col">product price</th>
-                    <th width="10%" scope="col">price (no discount)</th>
+                    <th width="8%" scope="col">product price</th>
+                    <th width="8%" scope="col">price (no discount)</th>
                     <th width="35%" scope="col">product description</th>
                     <th width="10%" scope="col">product alt text</th>
+                    <th scope="col">fabric</th>
                     <th width="20%" scope="col">action</th>
                 </tr>
             </thead>
@@ -174,15 +181,16 @@ if (isset($_GET['delete'])) {
 
                 <tr class='align-middle'>
                     <td><?php echo $row['product_id'] ?></td>
-                    <td><img src="uploaded_img/<?php echo $row['product_image']; ?>" height="120px"></td>
+                    <td><img src="uploaded_img/<?php echo $row['product_image']; ?>" height="110px" width="110px"></td>
                     <td><?php echo $row['product_name'] ?></td>
                     <td>RS <?php echo $row['product_price'] ?></td>
                     <td>RS <?php echo $row['No_Discount_price'] ?></td> 
-                    <td><textarea name="" id="product_description" readonly><?php echo $row['product_description'] ?></textarea></td>
+                    <td><textarea name="" id="prod-desc" readonly><?php echo $row['product_description'] ?></textarea></td>
                     <td><?php echo $row['product_alt_text'] ?></td>
+                    <td><?php echo $row['fabric'] ?></td>
 
                     <td>
-                    <a href="products_update.php?edit=<?php echo $row['product_id']; ?>"><button class="EDIT">EDIT</button></a>
+                        <a href="product_update_all.php?edit=<?php echo $row['product_id']; ?>"><button class="EDIT">EDIT</button></a>
                         <a href="all_products.php?delete=<?php echo $row['product_id']; ?>"><button class="DELETE">delete</button></a>
                     </td>
 

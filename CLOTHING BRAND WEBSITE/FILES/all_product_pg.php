@@ -1,4 +1,3 @@
-
 <?php
 include "config.php";
 if (isset($_GET['product'])) {
@@ -87,10 +86,13 @@ if (isset($_GET['product'])) {
                 </form>
 
                 <div class="product-info-div">
-
-                    <textarea name="" id="client_side_textarea" rows="15" cols="68" readonly>
-                        <?php echo $row['product_description'] ?>
-                    </textarea>
+                    <h2 class="prod-info-heading">PRODUCT INFORMATION</h2>
+                    <!-- <textarea name="" id="client_side_textarea" rows="15" cols="68" readonly> -->
+                    <?php echo $row['product_description'] ?>
+                    <!-- </textarea> -->
+                </div>
+                <div class="fabric">
+                    FABRIC:<?php echo $row['fabric'] ?>
                 </div>
 
                 <div class="note-fabric">
@@ -98,6 +100,7 @@ if (isset($_GET['product'])) {
                     <span class="note-detail">Color May Be Slightly Different from Product Image because of brightness of your screen.</span><br>
                     <a href="SHIPPINGANDDELIVERIES.php" class="note-anchor">SHIPPING & DELIVERIES</a>
                 </div>
+
 
             </div>
 

@@ -17,6 +17,7 @@ if (isset($_POST['add_product'])) {
     $No_Discount_price = $_POST['No_Discount_price'];
     $product_description = $_POST['product_description'];
     $product_alt_text = $_POST['product_alt_text'];
+    $fabric = $_POST['fabric'];
 
     
     $product_image = $_FILES['product_image']['name'];
@@ -28,7 +29,7 @@ if (isset($_POST['add_product'])) {
     if (empty($product_name) || empty($product_price) || empty($product_image)) {
         $message[] = 'please fill form';
     } else {
-        $insert = "INSERT INTO `main_products`(`product_name`, `product_price`,`No_Discount_price`, `product_description`,`product_alt_text`, `product_image`) VALUES ('$product_name','$product_price','$No_Discount_price','$product_description','$product_alt_text','$product_image')";
+        $insert = "INSERT INTO `main_products`(`product_name`, `product_price`,`No_Discount_price`, `product_description`,`product_alt_text`,`fabric`, `product_image`) VALUES ('$product_name','$product_price','$No_Discount_price','$product_description','$product_alt_text','$fabric','$product_image')";
         $upload = mysqli_query($con, $insert);
         if ($upload) {
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
@@ -119,6 +120,12 @@ if (isset($_GET['delete'])) {
                     </div>
 
                     <div class="inp_div">
+                        <label for="fabric">fabric</label>
+                        <input type="text" id="fabric" name="fabric" class="product_inputs" required>
+                    </div>
+
+
+                    <div class="inp_div">
                         <label for="product_image">Product image:</label>
                         <input type="file" accept=".png,.jpg,.svg" id="product_image" name="product_image" class="product_inputs" required>
                     </div>
@@ -159,6 +166,7 @@ if (isset($_GET['delete'])) {
                     <th width="10%" scope="col">price (no discount)</th>
                     <th width="35%" scope="col">product description</th>
                     <th width="10%" scope="col">product alt text</th>
+                    <th scope="col">fabric</th>
                     <th width="20%" scope="col">action</th>
                 </tr>
             </thead>
@@ -178,8 +186,9 @@ if (isset($_GET['delete'])) {
                     <td><?php echo $row['product_name'] ?></td>
                     <td>RS <?php echo $row['product_price'] ?></td>
                     <td>RS <?php echo $row['No_Discount_price'] ?></td> 
-                    <td><textarea name="" id="product_description" readonly><?php echo $row['product_description'] ?></textarea></td>
+                    <td><textarea name="" id="prod-desc" readonly><?php echo $row['product_description'] ?></textarea></td>
                     <td><?php echo $row['product_alt_text'] ?></td>
+                    <td><?php echo $row['fabric'] ?></td>
 
                     <td>
                         <a href="products_update.php?edit=<?php echo $row['product_id']; ?>"><button class="EDIT">EDIT</button></a>

@@ -79,7 +79,7 @@ if (isset($_POST['update_product'])) {
                         <input type="file" class="choose-file" accept="image/png,image/jpeg,image/jpg" name="product_image" >
                     </div>
                     <input type="submit" class="add-prod-btn" name="update_product" value="update product">
-                    <a href="ADD_PRODUCT.php" class="go-back-update">go back</a>
+                    <a href="all_products.php" class="go-back-update">go back</a>
 
 
                 </form>

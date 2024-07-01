@@ -84,18 +84,23 @@ if (isset($_GET['product'])) {
                         <button type="submit" name="add_to_cart" class="product-cart-btn">Add To Cart</button>
                     </div>
                 </form>
-
                 <div class="product-info-div">
-                    <textarea name="" id="client_side_textarea" rows="15" cols="68" readonly>
-                        <?php echo $row['product_description'] ?>
-                    </textarea>
+                    <!-- <textarea name="" id="client_side_textarea" readonly> -->
+                    <h2 class="prod-info-heading">PRODUCT INFORMATION</h2>
+                    <?php echo $row['product_description'] ?>
+                    <!-- </textarea> -->
                 </div>
+                <div class="fabric">
+                    FABRIC:<?php echo $row['fabric'] ?>
+                </div>
+
 
                 <div class="note-fabric">
                     <span class="note-heading">NOTE:</span><br>
                     <span class="note-detail">Color May Be Slightly Different from Product Image because of brightness of your screen.</span><br>
                     <a href="SHIPPINGANDDELIVERIES.php" class="note-anchor">SHIPPING & DELIVERIES</a>
                 </div>
+
 
             </div>
 
