@@ -7,6 +7,73 @@
     background-size: 2000px 1267px;
     background-repeat: no-repeat;
     /* background-size: cover; */
+    animation: carousells 20s infinite step-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1::before {
+    /* border: 1px solid red; */
+    width: 300px;
+    height: 200px;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    content: "";
+    animation: carousellstext 20s infinite step-end;
+}
+
+@keyframes carousellstext {
+    0% {
+        content: "Any text";
+    }
+
+    25% {
+        content: "Any text";
+
+    }
+
+    50% {
+        content: "Any text";
+    }
+
+    75% {
+
+        content: "Any text";
+    }
+}
+
+@keyframes carousells {
+    0% {
+        background: url(IMAGES/home-4.jpg);
+        background-position: top;
+        background-size: 2000px 1267px;
+        background-repeat: no-repeat;
+    }
+
+    25% {
+        background: url(IMAGES/test-1.jpg);
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    50% {
+        background: url(IMAGES/test-2.jpg);
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    75% {
+        background: url(IMAGES/shirt-3.jpg);
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+    }
 }
 
 .shopping-cards-home {
@@ -21,30 +88,35 @@
 
 
 }
+
 @media only screen and (max-width:800px) {
     .shopping-cards-home {
-        width: 90%;      
+        width: 90%;
     }
 
 }
+
 @media only screen and (max-width:715px) {
     .shopping-cards-home {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
+
 @media only screen and (max-width:715px) {
     .shopping-cards-home {
-        width: 100%;      
+        width: 100%;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 }
+
 @media only screen and (max-width:525px) {
-    .shopping-cards-home {     
+    .shopping-cards-home {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
+
 @media only screen and (max-width:400px) {
-    .shopping-cards-home {     
+    .shopping-cards-home {
         grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
         column-gap: 0px;
     }
@@ -136,7 +208,8 @@
     font-size: 15px;
     font-weight: 400;
 }
-.strike-align{
+
+.strike-align {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,11 +229,11 @@
 
 }
 
-.home-cards:hover>.shirt-details>.INFO{
+.home-cards:hover>.shirt-details>.INFO {
     display: none;
 }
 
-.home-cards:hover>.shirt-details>.shirt-hover-div{
+.home-cards:hover>.shirt-details>.shirt-hover-div {
     display: block;
 }
 
@@ -175,7 +248,8 @@
     justify-content: center;
     align-items: center;
 }
-.add-to-cart-form{
+
+.add-to-cart-form {
     width: 100%;
     height: 100%;
     display: flex;
@@ -184,52 +258,67 @@
     align-items: center;
     /* border: 1px solid red; */
 }
-.radio-boxes{
+
+.radio-boxes {
     width: 40%;
     display: flex;
     justify-content: space-around;
 }
-.radio-labels{
+
+.radio-labels {
     font-weight: 600;
 }
-.radios{
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
+
+.radios {
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -webkit-transform: scale(1.2);
+    /* Chrome, Safari, Opera */
     transform: scale(1.2);
     accent-color: #eb2c33;
 }
+
 @media only screen and (max-width:615px) {
-    .radio-boxes{
+    .radio-boxes {
         width: 50%;
     }
 }
+
 @media only screen and (max-width:490px) {
-    .radio-boxes{
+    .radio-boxes {
         width: 60%;
     }
-    .radios{
-        -ms-transform: scale(1.1); /* IE 9 */
-        -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+
+    .radios {
+        -ms-transform: scale(1.1);
+        /* IE 9 */
+        -webkit-transform: scale(1.1);
+        /* Chrome, Safari, Opera */
         transform: scale(1.1);
     }
+
     .shirt-name {
         font-size: 14px;
-       
+
     }
 }
+
 @media only screen and (max-width:395px) {
-    .radio-boxes{
+    .radio-boxes {
         width: 80%;
     }
 }
+
 @media only screen and (max-width:369px) {
-    .radio-boxes{
+    .radio-boxes {
         width: 52%;
     }
+
     .shirt-name {
         font-size: 18px;
     }
 }
+
 .shirt-cart-btn {
     padding: 0px 25px 0px 25px;
     background-color: #eb2c33;
@@ -249,11 +338,12 @@
 @media only screen and (max-width:370px) {
     .shirt-cart-btn {
         padding: 0px 14px 0px 14px;
-       
+
     }
-    
+
 }
-.new-tag{
+
+.new-tag {
     position: absolute;
     background-color: #eb2c33;
     width: 30px;
@@ -264,15 +354,17 @@
     justify-content: center;
     align-items: center;
     border-radius: 0px 0px 18px 18px;
-   
+
 }
+
 .card-image-div:hover>.new-tag {
-display: none;
+    display: none;
 }
-.new-txt{
+
+.new-txt {
     font-weight: 600;
     font-size: 13px;
-  
+
 }
 
 /* <!-- products section 🔼🔼🔼🔼🔼🔼 --> */
@@ -290,7 +382,7 @@ display: none;
 
 
 
-.disclaimer{
+.disclaimer {
     width: 100%;
     height: 200px;
     background-color: #f3f3f3;
@@ -301,7 +393,7 @@ display: none;
     align-items: center;
 }
 
-.disclaimer_boxes{
+.disclaimer_boxes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -312,48 +404,54 @@ display: none;
 }
 
 
-#discliamer-icon{
+#discliamer-icon {
     font-size: 30px;
 }
-.disclaimer-h{
+
+.disclaimer-h {
     font-size: 20px;
 }
-.disclaimer-p{
+
+.disclaimer-p {
     font-size: 13px;
-    color:#8b8b8b ;
+    color: #8b8b8b;
     text-align: center;
 }
 
 
-@media only screen and (max-width:814px){
-    .disclaimer{
+@media only screen and (max-width:814px) {
+    .disclaimer {
         justify-content: space-around;
     }
-    
+
 }
 
-@media only screen and (max-width:754px){
-    .disclaimer{
+@media only screen and (max-width:754px) {
+    .disclaimer {
         justify-content: space-between;
     }
-    .disclaimer_boxes{
+
+    .disclaimer_boxes {
         width: 33%;
     }
-    #discliamer-icon{
+
+    #discliamer-icon {
         font-size: 24px;
     }
-    .disclaimer-h{
+
+    .disclaimer-h {
         font-size: 15px;
     }
-    .disclaimer-p{
+
+    .disclaimer-p {
         font-size: 11.8px;
     }
-    
+
 }
 
-@media only screen and (max-width:600px){
-   
-    .disclaimer{
+@media only screen and (max-width:600px) {
+
+    .disclaimer {
         width: 100%;
         height: 500px;
         display: flex;
@@ -361,7 +459,8 @@ display: none;
         justify-content: center;
         align-items: center;
     }
-    .disclaimer_boxes{
+
+    .disclaimer_boxes {
         width: 80%;
     }
 }

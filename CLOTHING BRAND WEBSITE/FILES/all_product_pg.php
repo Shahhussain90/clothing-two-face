@@ -92,7 +92,7 @@ if (isset($_GET['product'])) {
                     <!-- </textarea> -->
                 </div>
                 <div class="fabric">
-                    FABRIC:<?php echo $row['fabric'] ?>
+                    FABRIC: <?php echo $row['fabric'] ?>
                 </div>
 
                 <div class="note-fabric">

@@ -1,7 +1,11 @@
 <?php
 
 include "../FILES/config.php";
-
+session_start();
+session_regenerate_id(true);
+if (!isset($_SESSION['Adminlogid'])) {
+    header('location:ADMIN_LOGIN.php');
+}
 $id = $_GET['edit'];
 
 if (isset($_POST['update_product'])) {
