@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    height: fit-content;
+    height: 100vh;
+}
+.img-add-div-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-add-form{
+    width: 45%;
+    height: 60%;
+    border: 1px solid green;
+    box-shadow: 10px 5px 10px 2px grey;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.update-input{
+    width: 90%;
+    padding: 5px 0px 5px 5px;
+    margin-top: 10px;
+    /* outline: 0;
+    border: 0; */
+    background-color: transparent;
+    border-radius: 5px;
+}
+.prod-desc{
+    padding: 5px 0px 25px 5px;
+}
+
+.update-prod-btn{
+    background-color: black;
+    color: white;
+    width: 110px;
+    height: 30px;
+    border: 1px solid black;
+    outline: 0;
+}
+
+.update-prod-btn:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.update-prod-btn:focus{
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.336);
+}
+
+
+
+
+
+
+
+
+
+
+
+
