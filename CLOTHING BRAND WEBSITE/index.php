@@ -28,7 +28,7 @@ session_start();
     <style>
         <?php include "css/index.css" ?>
     </style>
-    <title>doc</title>
+    <title></title>
 </head>
 
 <body>
