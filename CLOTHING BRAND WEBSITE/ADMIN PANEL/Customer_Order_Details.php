@@ -60,7 +60,7 @@ if (!isset($_SESSION['Adminlogid'])) {
                         <th scope="col" width="120px">order price</th>
                         <th scope="col" width="90px">order size</th>
                         <th scope="col" width="70px">order quantity</th>
-                        <th scope="col" width="130px" >TIME</th>
+                        
                     
                     </tr>
                 </thead>
@@ -77,7 +77,7 @@ if (!isset($_SESSION['Adminlogid'])) {
                         <td>RS $user_fetch[customer_order_price]</td>
                         <td>$user_fetch[customer_order_size]</td>
                         <td>$user_fetch[customer_order_quantity]</td>
-                        <td>$user_fetch[DATE_TIME]</td>
+             
                         
                     </tr>
                     ";

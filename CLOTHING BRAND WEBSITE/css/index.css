@@ -1,3 +1,17 @@
+
+body{
+    animation: fadeIN 0.5s ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIN{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+
+
+
+
 .section-1 {
     width: 100%;
     height: 100vh;

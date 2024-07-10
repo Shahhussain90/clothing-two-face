@@ -36,6 +36,11 @@
             <div class="admin_nav_links_divs">
                 <a href="Customer_Order_Details.php" class="admin_nav_links"><i class='bx bx-detail admin_icons'></i> Customer order details</a>
             </div >
+
+            <div class="admin_nav_links_divs">
+                <a href="combined_details.php" class="admin_nav_links"><i class='bx bx-detail admin_icons'></i> combined_details</a>
+            </div >
+
             <div class="admin_nav_links_divs">
                 <a href="ADD_PRODUCT.php" class="admin_nav_links"><i class='bx bxs-t-shirt admin_icons'></i></i> Add products</a>
             </div>

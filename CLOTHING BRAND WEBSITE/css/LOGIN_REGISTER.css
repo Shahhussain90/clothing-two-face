@@ -18,7 +18,16 @@ body {
     align-items: center;
     justify-content: center;
     /* background-color: rgb(100, 100, 100); */
+
+    animation: fadeIN 0.5s ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+@keyframes fadeIN{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+
 
 
 .LOGIN-FORM,

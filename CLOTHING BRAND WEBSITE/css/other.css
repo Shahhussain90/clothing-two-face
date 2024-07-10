@@ -1,3 +1,12 @@
+body{
+    animation: fadeIN 0.5s ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIN{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
 
 
 .how-to-order {
