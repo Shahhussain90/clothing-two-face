@@ -12,7 +12,7 @@
     </style>
 
 
-    <title>Document</title>
+    <title>Doc</title>
 </head>
 
 <body id="body">
